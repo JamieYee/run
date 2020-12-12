@@ -1,0 +1,6 @@
+# https://github.com/nzw9314/Surge/blob/master/Ruleset/SpeedTest.list
+
+# > Speedtest by Ookla
+DOMAIN-KEYWORD,speedtest
+DOMAIN-SUFFIX,ooklaserver.net
+DOMAIN-SUFFIX,fast.com
