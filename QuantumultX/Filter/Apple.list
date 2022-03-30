@@ -36,21 +36,21 @@ HOST-KEYWORD,icloud.com.akadns.net,DIRECT
 HOST,hls-svod.itunes.apple.com,🍎 Apple
 
 # > Apple Music
-HOST,aod.itunes.apple.com,🍎 Apple
-HOST,aod-ssl.itunes.apple.com,🍎 Apple
-HOST,audio-ssl.itunes.apple.com,🍎 Apple
-HOST,audio.itunes.apple.com,🍎 Apple
-HOST,mvod.itunes.apple.com,🍎 Apple
-HOST,streamingaudio.itunes.apple.com,🍎 Apple
+HOST,aod.itunes.apple.com,DIRECT
+HOST,aod-ssl.itunes.apple.com,DIRECT
+HOST,audio-ssl.itunes.apple.com,DIRECT
+HOST,audio.itunes.apple.com,DIRECT
+HOST,mvod.itunes.apple.com,DIRECT
+HOST,streamingaudio.itunes.apple.com,DIRECT
 # blobstore.apple.com是上传私人歌曲至iCloud库所链接的域名，直连虽慢但可用。建议直连direct以节约流量。
 HOST-SUFFIX,blobstore.apple.com,🍎 Apple
-HOST-SUFFIX,music.apple.com,🍎 Apple
-HOST-SUFFIX,applemusic.com,🍎 Apple
+HOST-SUFFIX,music.apple.com,DIRECT
+HOST-SUFFIX,applemusic.com,DIRECT
 # mzstatic.com用于移动端加载iTunes某些内容页面，包括但不限于app store内的缩略图。
-HOST-SUFFIX,mzstatic.com,🍎 Apple
+HOST-SUFFIX,mzstatic.com,DIRECT
 # amp.api.music暂不清楚，暂时使用策略代理。
-HOST-SUFFIX, amp-api.music.apple.com,🍎 Apple
-USER-AGENT,Music*,🍎 Apple
+HOST-SUFFIX, amp-api.music.apple.com,DIRECT
+USER-AGENT,Music*,DIRECT
 
 # Apple News
 HOST,apple.comscoreresearch.com,🍎 Apple
