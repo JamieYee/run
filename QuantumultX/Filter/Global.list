@@ -1,230 +1,230 @@
 # > 🌍 Global
 USER-AGENT,com.google.ios.youtube*,🌍 Global
 USER-AGENT,YouTube*,🌍 Global
-DOMAIN-SUFFIX,googlevideo.com,🌍 Global
-DOMAIN-SUFFIX,withyoutube.com,🌍 Global
-DOMAIN-SUFFIX,youtu.be,🌍 Global
-DOMAIN-SUFFIX,youtube.com,🌍 Global
-DOMAIN-SUFFIX,youtubeeducation.com,🌍 Global
-DOMAIN-SUFFIX,youtubegaming.com,🌍 Global
-DOMAIN-SUFFIX,youtubekids.com,🌍 Global
-DOMAIN-SUFFIX,youtube-nocookie.com,🌍 Global
-DOMAIN-SUFFIX,yt.be,🌍 Global
-DOMAIN-SUFFIX,ytimg.com,🌍 Global
-DOMAIN,youtubei.googleapis.com,🌍 Global
-DOMAIN,yt3.ggpht.com,🌍 Global
+HOST-SUFFIX,googlevideo.com,🌍 Global
+HOST-SUFFIX,withyoutube.com,🌍 Global
+HOST-SUFFIX,youtu.be,🌍 Global
+HOST-SUFFIX,youtube.com,🌍 Global
+HOST-SUFFIX,youtubeeducation.com,🌍 Global
+HOST-SUFFIX,youtubegaming.com,🌍 Global
+HOST-SUFFIX,youtubekids.com,🌍 Global
+HOST-SUFFIX,youtube-nocookie.com,🌍 Global
+HOST-SUFFIX,yt.be,🌍 Global
+HOST-SUFFIX,ytimg.com,🌍 Global
+HOST,youtubei.googleapis.com,🌍 Global
+HOST,yt3.ggpht.com,🌍 Global
 
 # >> Google
-host-keyword,google,🌍 Global
-host-suffix,265.com,🌍 Global
+HOST-KEYWORD,google,🌍 Global
+HOST-SUFFIX,265.com,🌍 Global
 
 # > Alphabet Websites 
-host-suffix,abc.xyz,🌍 Global
-host-suffix,capitalg.com,🌍 Global
+HOST-SUFFIX,abc.xyz,🌍 Global
+HOST-SUFFIX,capitalg.com,🌍 Global
 
 # > Android
-host-suffix,android.com,🌍 Global
-host-suffix,androidify.com,🌍 Global
+HOST-SUFFIX,android.com,🌍 Global
+HOST-SUFFIX,androidify.com,🌍 Global
 
 # > Appspot
-host-keyword,appspot,🌍 Global
+HOST-KEYWORD,appspot,🌍 Global
 
 # > Chrome & Chromium
-host-suffix,chrome.com,🌍 Global
-host-suffix,chromeexperiments.com,🌍 Global
-host-suffix,chromestatus.com,🌍 Global
-host-suffix,chromium.org,🌍 Global
-host-suffix,whatbrowser.org,🌍 Global
+HOST-SUFFIX,chrome.com,🌍 Global
+HOST-SUFFIX,chromeexperiments.com,🌍 Global
+HOST-SUFFIX,chromestatus.com,🌍 Global
+HOST-SUFFIX,chromium.org,🌍 Global
+HOST-SUFFIX,whatbrowser.org,🌍 Global
 
 # > Google AI
-host-suffix,autodraw.com,🌍 Global
-host-suffix,deepmind.com,🌍 Global
-host-suffix,tensorflow.org,🌍 Global
-host-suffix,tfhub.dev,🌍 Global
+HOST-SUFFIX,autodraw.com,🌍 Global
+HOST-SUFFIX,deepmind.com,🌍 Global
+HOST-SUFFIX,tensorflow.org,🌍 Global
+HOST-SUFFIX,tfhub.dev,🌍 Global
 
 # > Google APIs
-host-suffix,googleapis.com,🌍 Global
+HOST-SUFFIX,googleapis.com,🌍 Global
 
 # > Google Blogger
-host-keyword,blogspot,🌍 Global
-host-suffix,blogger.com,🌍 Global
-host-suffix,googleblog.com,🌍 Global
+HOST-KEYWORD,blogspot,🌍 Global
+HOST-SUFFIX,blogger.com,🌍 Global
+HOST-SUFFIX,googleblog.com,🌍 Global
 
 # > Google Cloud Platform
-host-suffix,dialogflow.com,🌍 Global
-host-suffix,gcp.gvt2.com,🌍 Global
+HOST-SUFFIX,dialogflow.com,🌍 Global
+HOST-SUFFIX,gcp.gvt2.com,🌍 Global
 
 # > Google Developer
-host-keyword,googlesource,🌍 Global
-host-suffix,godoc.org,🌍 Global
-host-suffix,golang.org,🌍 Global
-host-suffix,googlemashups.com,🌍 Global
-host-suffix,gwtproject.org,🌍 Global
-host-suffix,itasoftware.com,🌍 Global
-host-suffix,pkg.go.dev,🌍 Global
-host-suffix,shattered.io,🌍 Global
-host-suffix,waveprotocol.org,🌍 Global
-host-suffix,webmproject.org,🌍 Global
-host-suffix,webrtc.org,🌍 Global
-host-suffix,withgoogle.com,🌍 Global
+HOST-KEYWORD,googlesource,🌍 Global
+HOST-SUFFIX,godoc.org,🌍 Global
+HOST-SUFFIX,golang.org,🌍 Global
+HOST-SUFFIX,googlemashups.com,🌍 Global
+HOST-SUFFIX,gwtproject.org,🌍 Global
+HOST-SUFFIX,itasoftware.com,🌍 Global
+HOST-SUFFIX,pkg.go.dev,🌍 Global
+HOST-SUFFIX,shattered.io,🌍 Global
+HOST-SUFFIX,waveprotocol.org,🌍 Global
+HOST-SUFFIX,webmproject.org,🌍 Global
+HOST-SUFFIX,webrtc.org,🌍 Global
+HOST-SUFFIX,withgoogle.com,🌍 Global
 
 # > Google Education
-host-suffix,madewithcode.com,🌍 Global
+HOST-SUFFIX,madewithcode.com,🌍 Global
 
 # > Google Enterprise
-host-suffix,synergyse.com,🌍 Global
+HOST-SUFFIX,synergyse.com,🌍 Global
 
 # > Gmail
-host-keyword,gmail,🌍 Global
+HOST-KEYWORD,gmail,🌍 Global
 
 # > Google Recaptcha
-host-keyword,recaptcha,🌍 Global
+HOST-KEYWORD,recaptcha,🌍 Global
 
 # > Google Static Files
 host-keyword,gstatic,🌍 Global
-host-suffix,gmodules.com,🌍 Global
-host-suffix,googleusercontent.com,🌍 Global
-host-suffix,gvt0.com,🌍 Global
-host-suffix,gvt1.com,🌍 Global
-host-suffix,gvt3.com,🌍 Global
+HOST-SUFFIX,gmodules.com,🌍 Global
+HOST-SUFFIX,googleusercontent.com,🌍 Global
+HOST-SUFFIX,gvt0.com,🌍 Global
+HOST-SUFFIX,gvt1.com,🌍 Global
+HOST-SUFFIX,gvt3.com,🌍 Global
 
 # > Google VR
-host-suffix,tiltbrush.com,🌍 Global
+HOST-SUFFIX,tiltbrush.com,🌍 Global
 
 # > Material Design
-host-suffix,getmdl.io,🌍 Global
-host-suffix,material.io,🌍 Global
+HOST-SUFFIX,getmdl.io,🌍 Global
+HOST-SUFFIX,material.io,🌍 Global
 
 # > Other
-host-suffix,certificate-transparency.org,🌍 Global
-host-suffix,certificate-transparency.dev,🌍 Global
-host-suffix,creativelab5.com,🌍 Global
-host-suffix,debug.com,🌍 Global
-host-suffix,gv.com,🌍 Global
-host-suffix,polymer-project.org,🌍 Global
-host-suffix,waymo.com,🌍 Global
-host-suffix,widevine.com,🌍 Global
-host-suffix,x.company,🌍 Global
+HOST-SUFFIX,certificate-transparency.org,🌍 Global
+HOST-SUFFIX,certificate-transparency.dev,🌍 Global
+HOST-SUFFIX,creativelab5.com,🌍 Global
+HOST-SUFFIX,debug.com,🌍 Global
+HOST-SUFFIX,gv.com,🌍 Global
+HOST-SUFFIX,polymer-project.org,🌍 Global
+HOST-SUFFIX,waymo.com,🌍 Global
+HOST-SUFFIX,widevine.com,🌍 Global
+HOST-SUFFIX,x.company,🌍 Global
 
 # > Google IP-CIDR
-ip-cidr,173.194.0.0/16,🌍 Global
-ip-cidr,74.125.0.0/16,🌍 Global
+IP-CIDR,173.194.0.0/16,🌍 Global
+IP-CIDR,74.125.0.0/16,🌍 Global
 
 # > Google Search
-DOMAIN-KEYWORD,www.google.,🌍 Global
+HOST-KEYWORD,www.google.,🌍 Global
 
 # > Google Voice
 # 如果你的代理服务器不支持 udp-relay 可尝试 DIRECT 以免被 REJECT（部分 Google 服务器还可直连）
-DOMAIN,lens.l.google.com,🌍 Global
+HOST,lens.l.google.com,🌍 Global
 
 # > Google Drive
 USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*,🌍 Global
 USER-AGENT,Google.Drive*,🌍 Global
 USER-AGENT,*com.google.Drive*,🌍 Global
-DOMAIN-SUFFIX,docs.google.com,🌍 Global
-DOMAIN-SUFFIX,drive.google.com,🌍 Global
-DOMAIN-SUFFIX,googledrive.com,🌍 Global
-DOMAIN-SUFFIX,googleusercontent.com,🌍 Global
-DOMAIN,www.googleapis.com,🌍 Global
+HOST-SUFFIX,docs.google.com,🌍 Global
+HOST-SUFFIX,drive.google.com,🌍 Global
+HOST-SUFFIX,googledrive.com,🌍 Global
+HOST-SUFFIX,googleusercontent.com,🌍 Global
+HOST,www.googleapis.com,🌍 Global
 
 # > Meta
-DOMAIN-SUFFIX,accountkit.com,🌍 Global
-DOMAIN-SUFFIX,cdninstagram.com,🌍 Global
-DOMAIN-SUFFIX,f8.com,🌍 Global
-DOMAIN-SUFFIX,facebookmail.com,🌍 Global
-DOMAIN-SUFFIX,fb.com,🌍 Global
-DOMAIN-SUFFIX,fb.me,🌍 Global
-DOMAIN-SUFFIX,fb.watch,🌍 Global
-DOMAIN-SUFFIX,fbaddins.com,🌍 Global
-DOMAIN-SUFFIX,fbcdn.net,🌍 Global
-DOMAIN-SUFFIX,fbsbx.com,🌍 Global
-DOMAIN-SUFFIX,fbworkmail.com,🌍 Global
-DOMAIN-SUFFIX,instagram.com,🌍 Global
-DOMAIN-SUFFIX,m.me,🌍 Global
-DOMAIN-SUFFIX,messenger.com,🌍 Global
-DOMAIN-SUFFIX,oculus.com,🌍 Global
-DOMAIN-SUFFIX,oculuscdn.com,🌍 Global
-DOMAIN-SUFFIX,readyatdawn.com,🌍 Global
-DOMAIN-SUFFIX,rocksdb.org,🌍 Global
-DOMAIN-SUFFIX,whatsapp.com,🌍 Global
-DOMAIN-SUFFIX,whatsapp.net,🌍 Global
-DOMAIN-KEYWORD,.facebook.,🌍 Global
+HOST-SUFFIX,accountkit.com,🌍 Global
+HOST-SUFFIX,cdninstagram.com,🌍 Global
+HOST-SUFFIX,f8.com,🌍 Global
+HOST-SUFFIX,facebookmail.com,🌍 Global
+HOST-SUFFIX,fb.com,🌍 Global
+HOST-SUFFIX,fb.me,🌍 Global
+HOST-SUFFIX,fb.watch,🌍 Global
+HOST-SUFFIX,fbaddins.com,🌍 Global
+HOST-SUFFIX,fbcdn.net,🌍 Global
+HOST-SUFFIX,fbsbx.com,🌍 Global
+HOST-SUFFIX,fbworkmail.com,🌍 Global
+HOST-SUFFIX,instagram.com,🌍 Global
+HOST-SUFFIX,m.me,🌍 Global
+HOST-SUFFIX,messenger.com,🌍 Global
+HOST-SUFFIX,oculus.com,🌍 Global
+HOST-SUFFIX,oculuscdn.com,🌍 Global
+HOST-SUFFIX,readyatdawn.com,🌍 Global
+HOST-SUFFIX,rocksdb.org,🌍 Global
+HOST-SUFFIX,whatsapp.com,🌍 Global
+HOST-SUFFIX,whatsapp.net,🌍 Global
+HOST-KEYWORD,.facebook.,🌍 Global
 
 # > Twitter
-DOMAIN-SUFFIX,periscope.tv,🌍 Global
-DOMAIN-SUFFIX,pscp.tv,🌍 Global
-DOMAIN-SUFFIX,t.co,🌍 Global
-DOMAIN-SUFFIX,tweetdeck.com,🌍 Global
-DOMAIN-SUFFIX,twimg.co,🌍 Global
-DOMAIN-SUFFIX,twimg.com,🌍 Global
-DOMAIN-SUFFIX,twitpic.com,🌍 Global
-DOMAIN-SUFFIX,twitter.com,🌍 Global
-DOMAIN-SUFFIX,twitter.jp,🌍 Global
-DOMAIN-SUFFIX,vine.co,🌍 Global
+HOST-SUFFIX,periscope.tv,🌍 Global
+HOST-SUFFIX,pscp.tv,🌍 Global
+HOST-SUFFIX,t.co,🌍 Global
+HOST-SUFFIX,tweetdeck.com,🌍 Global
+HOST-SUFFIX,twimg.co,🌍 Global
+HOST-SUFFIX,twimg.com,🌍 Global
+HOST-SUFFIX,twitpic.com,🌍 Global
+HOST-SUFFIX,twitter.com,🌍 Global
+HOST-SUFFIX,twitter.jp,🌍 Global
+HOST-SUFFIX,vine.co,🌍 Global
 
 # > The Economist
-DOMAIN-SUFFIX,economist.com,🌍 Global
-DOMAIN-SUFFIX,static-economist.com,🌍 Global
+HOST-SUFFIX,economist.com,🌍 Global
+HOST-SUFFIX,static-economist.com,🌍 Global
 
 # > The New York Times
-DOMAIN-SUFFIX,newyorktimes.com,🌍 Global
-DOMAIN-SUFFIX,nyt.com,🌍 Global
-DOMAIN-SUFFIX,nytco.com,🌍 Global
-DOMAIN-SUFFIX,nytimes.com,🌍 Global
-DOMAIN-SUFFIX,nytimg.com,🌍 Global
-DOMAIN-SUFFIX,nytlog.com,🌍 Global
-DOMAIN-SUFFIX,nytstyle.com,🌍 Global
-DOMAIN-SUFFIX,tmagazine.com,🌍 Global
+HOST-SUFFIX,newyorktimes.com,🌍 Global
+HOST-SUFFIX,nyt.com,🌍 Global
+HOST-SUFFIX,nytco.com,🌍 Global
+HOST-SUFFIX,nytimes.com,🌍 Global
+HOST-SUFFIX,nytimg.com,🌍 Global
+HOST-SUFFIX,nytlog.com,🌍 Global
+HOST-SUFFIX,nytstyle.com,🌍 Global
+HOST-SUFFIX,tmagazine.com,🌍 Global
 
 # > Amazon
-DOMAIN-SUFFIX,amazon.co.jp,🌍 Global
-DOMAIN,d3c33hcgiwev3.cloudfront.net,🌍 Global
-DOMAIN,payments-jp.amazon.com,🌍 Global
-DOMAIN,s3-ap-northeast-1.amazonaws.com,🌍 Global
-DOMAIN,s3-ap-southeast-2.amazonaws.com,🌍 Global
+HOST-SUFFIX,amazon.co.jp,🌍 Global
+HOST,d3c33hcgiwev3.cloudfront.net,🌍 Global
+HOST,payments-jp.amazon.com,🌍 Global
+HOST,s3-ap-northeast-1.amazonaws.com,🌍 Global
+HOST,s3-ap-southeast-2.amazonaws.com,🌍 Global
 
 # > Bloomberg
-DOMAIN-SUFFIX,bloomberg.cn,🌍 Global
-DOMAIN-SUFFIX,bloomberg.com,🌍 Global
-DOMAIN-SUFFIX,bloomberg.de,🌍 Global
-DOMAIN-SUFFIX,bloombergview.com,🌍 Global
+HOST-SUFFIX,bloomberg.cn,🌍 Global
+HOST-SUFFIX,bloomberg.com,🌍 Global
+HOST-SUFFIX,bloomberg.de,🌍 Global
+HOST-SUFFIX,bloombergview.com,🌍 Global
 
 # > Microsoft
-DOMAIN-SUFFIX,aka.ms,🌍 Global
-DOMAIN-SUFFIX,github.blog,🌍 Global
-DOMAIN-SUFFIX,github.com,🌍 Global
-DOMAIN-SUFFIX,github.io,🌍 Global
-DOMAIN-SUFFIX,githubassets.com,🌍 Global
-DOMAIN-SUFFIX,githubusercontent.com,🌍 Global
-DOMAIN-SUFFIX,onedrive.live.com,🌍 Global
-DOMAIN-SUFFIX,streaming.mediaservices.windows.net,🌍 Global
-DOMAIN-SUFFIX,bing.com,🌍 Global
-DOMAIN-SUFFIX,linkedin.com,🌍 Global
-DOMAIN-SUFFIX,licdn.com,🌍 Global
-DOMAIN-SUFFIX,msn.com,🌍 Global
-DOMAIN-SUFFIX,skype.com,🌍 Global
-DOMAIN,assets1.xboxlive.com,🌍 Global
-DOMAIN,assets2.xboxlive.com,🌍 Global
-DOMAIN,az416426.vo.msecnd.net,🌍 Global
-DOMAIN,az668014.vo.msecnd.net,🌍 Global
+HOST-SUFFIX,aka.ms,🌍 Global
+HOST-SUFFIX,github.blog,🌍 Global
+HOST-SUFFIX,github.com,🌍 Global
+HOST-SUFFIX,github.io,🌍 Global
+HOST-SUFFIX,githubassets.com,🌍 Global
+HOST-SUFFIX,githubusercontent.com,🌍 Global
+HOST-SUFFIX,onedrive.live.com,🌍 Global
+HOST-SUFFIX,streaming.mediaservices.windows.net,🌍 Global
+HOST-SUFFIX,bing.com,🌍 Global
+HOST-SUFFIX,linkedin.com,🌍 Global
+HOST-SUFFIX,licdn.com,🌍 Global
+HOST-SUFFIX,msn.com,🌍 Global
+HOST-SUFFIX,skype.com,🌍 Global
+HOST,assets1.xboxlive.com,🌍 Global
+HOST,assets2.xboxlive.com,🌍 Global
+HOST,az416426.vo.msecnd.net,🌍 Global
+HOST,az668014.vo.msecnd.net,🌍 Global
 
 # > Reddit
-DOMAIN-SUFFIX,redd.it,🌍 Global
-DOMAIN-SUFFIX,reddit.com,🌍 Global
-DOMAIN-SUFFIX,redditmedia.com,🌍 Global
-DOMAIN-SUFFIX,redditstatic.com,🌍 Global
+HOST-SUFFIX,redd.it,🌍 Global
+HOST-SUFFIX,reddit.com,🌍 Global
+HOST-SUFFIX,redditmedia.com,🌍 Global
+HOST-SUFFIX,redditstatic.com,🌍 Global
 
 # > Wikimedia Foundation
-DOMAIN-SUFFIX,mediawiki.org,🌍 Global
-DOMAIN-SUFFIX,wikibooks.org,🌍 Global
-DOMAIN-SUFFIX,wikidata.org,🌍 Global
-DOMAIN-SUFFIX,wikileaks.org,🌍 Global
-DOMAIN-SUFFIX,wikimedia.org,🌍 Global
-DOMAIN-SUFFIX,wikimediafoundation.org,🌍 Global
-DOMAIN-SUFFIX,wikinews.org,🌍 Global
-DOMAIN-SUFFIX,wikipedia.org,🌍 Global
-DOMAIN-SUFFIX,wikiquote.org,🌍 Global
-DOMAIN-SUFFIX,wikisource.org,🌍 Global
-DOMAIN-SUFFIX,wikiversity.org,🌍 Global
-DOMAIN-SUFFIX,wikivoyage.org,🌍 Global
-DOMAIN-SUFFIX,wiktionary.org,🌍 Global
+HOST-SUFFIX,mediawiki.org,🌍 Global
+HOST-SUFFIX,wikibooks.org,🌍 Global
+HOST-SUFFIX,wikidata.org,🌍 Global
+HOST-SUFFIX,wikileaks.org,🌍 Global
+HOST-SUFFIX,wikimedia.org,🌍 Global
+HOST-SUFFIX,wikimediafoundation.org,🌍 Global
+HOST-SUFFIX,wikinews.org,🌍 Global
+HOST-SUFFIX,wikipedia.org,🌍 Global
+HOST-SUFFIX,wikiquote.org,🌍 Global
+HOST-SUFFIX,wikisource.org,🌍 Global
+HOST-SUFFIX,wikiversity.org,🌍 Global
+HOST-SUFFIX,wikivoyage.org,🌍 Global
+HOST-SUFFIX,wiktionary.org,🌍 Global
