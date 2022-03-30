@@ -1,4 +1,4 @@
-# > 🌍 Global
+# > YouTube
 USER-AGENT,com.google.ios.youtube*,🌍 Global
 USER-AGENT,YouTube*,🌍 Global
 HOST-SUFFIX,googlevideo.com,🌍 Global
@@ -14,7 +14,7 @@ HOST-SUFFIX,ytimg.com,🌍 Global
 HOST,youtubei.googleapis.com,🌍 Global
 HOST,yt3.ggpht.com,🌍 Global
 
-# >> Google
+# > Google
 HOST-KEYWORD,google,🌍 Global
 HOST-SUFFIX,265.com,🌍 Global
 
