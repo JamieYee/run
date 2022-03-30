@@ -36,7 +36,6 @@ HOST-KEYWORD,icloud.com.akadns.net,DIRECT
 HOST,hls-svod.itunes.apple.com,🍎 Apple服务
 
 # > Apple Music
-HOST,play.itunes.apple.com,DIRECT
 HOST,aod.itunes.apple.com,🍎 Apple服务
 HOST,aod-ssl.itunes.apple.com,🍎 Apple服务
 HOST,audio-ssl.itunes.apple.com,🍎 Apple服务
