@@ -1,1 +1,84 @@
+# App Store
+# Store content such as apps, books, and music
+HOST-SUFFIX,apps.apple.com,DIRECT
+HOST-SUFFIX,itunes.apple.com,DIRECT
+HOST-SUFFIX,itunes-apple.com.akadns.net,DIRECT
+HOST-SUFFIX,mzstatic.com,DIRECT
+HOST,ppq.apple.com,DIRECT
 
+# > App Store Connect
+HOST,appstoreconnect.apple.com,DIRECT
+HOST,iosapps-ssl.itunes.apple.com,DIRECT
+HOST,itcmobile.itunes.apple.com,DIRECT
+
+# Apple Books
+HOST,buy.itunes.apple.com,DIRECT
+HOST-SUFFIX,books.apple.com,DIRECT
+HOST,books.itunes.apple.com,DIRECT
+HOST,bookkeeper.itunes.apple.com,DIRECT
+HOST,books-analytics-events.apple.com,DIRECT
+
+
+# iCloud
+HOST-SUFFIX,apple-cloudkit.com,DIRECT
+HOST-SUFFIX,apple-livephotoskit.com,DIRECT
+HOST-SUFFIX,apzones.com,DIRECT
+HOST-SUFFIX,cdn-apple.com,DIRECT
+HOST-SUFFIX,gc.apple.com,DIRECT
+HOST-SUFFIX,icloud.apple.com,DIRECT
+HOST-SUFFIX,icloud.com,DIRECT
+HOST-SUFFIX,icloud.com.cn,DIRECT
+HOST-SUFFIX,icloud-content.com,DIRECT
+HOST-SUFFIX,iwork.apple.com,DIRECT
+HOST-KEYWORD,icloud.com.akadns.net,DIRECT
+
+# Fitness+
+HOST,hls-svod.itunes.apple.com,🍎 Apple服务
+
+# > Apple Music
+HOST,aod.itunes.apple.com,🍎 Apple服务
+HOST,aod-ssl.itunes.apple.com,🍎 Apple服务
+HOST,audio-ssl.itunes.apple.com,🍎 Apple服务
+HOST,audio.itunes.apple.com,🍎 Apple服务
+HOST,mvod.itunes.apple.com,🍎 Apple服务
+HOST,streamingaudio.itunes.apple.com,🍎 Apple服务
+# blobstore.apple.com是上传私人歌曲至iCloud库所链接的域名，直连虽慢但可用。建议直连direct以节约流量。
+HOST-SUFFIX,blobstore.apple.com,🍎 Apple服务
+HOST-SUFFIX,music.apple.com,🍎 Apple服务
+HOST-SUFFIX,applemusic.com,🍎 Apple服务
+# mzstatic.com用于移动端加载iTunes某些内容页面，包括但不限于app store内的缩略图。
+HOST-SUFFIX,mzstatic.com,🍎 Apple服务
+# amp.api.music暂不清楚，暂时使用策略代理。
+HOST-SUFFIX, amp-api.music.apple.com,🍎 Apple服务
+USER-AGENT,Music*,🍎 Apple服务
+
+# Apple News
+HOST,apple.comscoreresearch.com,🍎 Apple服务
+# HOST,gateway.icloud.com必须走代理,且为美加英澳线路,目前仅此4个国家提供news服务
+HOST,gateway.icloud.com,🍎 Apple服务
+HOST,gspe1-ssl.ls.apple.com,🍎 Apple服务
+# host-suffix,ls.apple.com,🍎 Apple服务
+HOST,news-assets.apple.com,🍎 Apple服务
+HOST,news-client-search.apple.com,🍎 Apple服务
+HOST,news-client.apple.com,🍎 Apple服务
+HOST,news-edge.apple.com,🍎 Apple服务
+HOST,news-events.apple.com,🍎 Apple服务
+HOST-SUFFIX,apple.news,🍎 Apple服务
+# HOST-SUFFIX,c.apple.news,🍎 Apple服务
+HOST-SUFFIX,gsas.apple.com,🍎 Apple服务
+HOST-SUFFIX,newsletter-edge.apple.com,🍎 Apple服务
+USER-AGENT,AppleNews*,🍎 Apple服务
+USER-AGENT,com.apple.news*,🍎 Apple服务
+# USER-AGENT,News*,🍎 Apple服务
+
+# Apple TV
+HOST,hls-amt.itunes.apple.com,🍎 Apple服务
+HOST,hls.itunes.apple.com,🍎 Apple服务
+HOST,np-edge.itunes.apple.com,🍎 Apple服务
+HOST,play-edge.itunes.apple.com,🍎 Apple服务
+HOST,uts-api.itunes.apple.com,🍎 Apple服务
+HOST-SUFFIX,tv.apple.com,🍎 Apple服务
+USER-AGENT,AppleTV*,🍎 Apple服务
+USER-AGENT,com.apple.tv*,🍎 Apple服务
+# vod-ap3-aoc用于视频缓存，请按需设置规则,若要改为直连,将末尾的AppleTV改为direct即可
+HOST-SUFFIX,vod-ap3-aoc.tv.apple.com,DIRECT
