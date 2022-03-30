@@ -33,52 +33,52 @@ HOST-SUFFIX,iwork.apple.com,DIRECT
 HOST-KEYWORD,icloud.com.akadns.net,DIRECT
 
 # Fitness+
-HOST,hls-svod.itunes.apple.com,🍎 Apple服务
+HOST,hls-svod.itunes.apple.com,🍎 Apple
 
 # > Apple Music
-HOST,aod.itunes.apple.com,🍎 Apple服务
-HOST,aod-ssl.itunes.apple.com,🍎 Apple服务
-HOST,audio-ssl.itunes.apple.com,🍎 Apple服务
-HOST,audio.itunes.apple.com,🍎 Apple服务
-HOST,mvod.itunes.apple.com,🍎 Apple服务
-HOST,streamingaudio.itunes.apple.com,🍎 Apple服务
+HOST,aod.itunes.apple.com,🍎 Apple
+HOST,aod-ssl.itunes.apple.com,🍎 Apple
+HOST,audio-ssl.itunes.apple.com,🍎 Apple
+HOST,audio.itunes.apple.com,🍎 Apple
+HOST,mvod.itunes.apple.com,🍎 Apple
+HOST,streamingaudio.itunes.apple.com,🍎 Apple
 # blobstore.apple.com是上传私人歌曲至iCloud库所链接的域名，直连虽慢但可用。建议直连direct以节约流量。
-HOST-SUFFIX,blobstore.apple.com,🍎 Apple服务
-HOST-SUFFIX,music.apple.com,🍎 Apple服务
-HOST-SUFFIX,applemusic.com,🍎 Apple服务
+HOST-SUFFIX,blobstore.apple.com,🍎 Apple
+HOST-SUFFIX,music.apple.com,🍎 Apple
+HOST-SUFFIX,applemusic.com,🍎 Apple
 # mzstatic.com用于移动端加载iTunes某些内容页面，包括但不限于app store内的缩略图。
-HOST-SUFFIX,mzstatic.com,🍎 Apple服务
+HOST-SUFFIX,mzstatic.com,🍎 Apple
 # amp.api.music暂不清楚，暂时使用策略代理。
-HOST-SUFFIX, amp-api.music.apple.com,🍎 Apple服务
-USER-AGENT,Music*,🍎 Apple服务
+HOST-SUFFIX, amp-api.music.apple.com,🍎 Apple
+USER-AGENT,Music*,🍎 Apple
 
 # Apple News
-HOST,apple.comscoreresearch.com,🍎 Apple服务
+HOST,apple.comscoreresearch.com,🍎 Apple
 # HOST,gateway.icloud.com必须走代理,且为美加英澳线路,目前仅此4个国家提供news服务
-HOST,gateway.icloud.com,🍎 Apple服务
-HOST,gspe1-ssl.ls.apple.com,🍎 Apple服务
-# host-suffix,ls.apple.com,🍎 Apple服务
-HOST,news-assets.apple.com,🍎 Apple服务
-HOST,news-client-search.apple.com,🍎 Apple服务
-HOST,news-client.apple.com,🍎 Apple服务
-HOST,news-edge.apple.com,🍎 Apple服务
-HOST,news-events.apple.com,🍎 Apple服务
-HOST-SUFFIX,apple.news,🍎 Apple服务
-# HOST-SUFFIX,c.apple.news,🍎 Apple服务
-HOST-SUFFIX,gsas.apple.com,🍎 Apple服务
-HOST-SUFFIX,newsletter-edge.apple.com,🍎 Apple服务
-USER-AGENT,AppleNews*,🍎 Apple服务
-USER-AGENT,com.apple.news*,🍎 Apple服务
-# USER-AGENT,News*,🍎 Apple服务
+HOST,gateway.icloud.com,🍎 Apple
+HOST,gspe1-ssl.ls.apple.com,🍎 Apple
+# host-suffix,ls.apple.com,🍎 Apple
+HOST,news-assets.apple.com,🍎 Apple
+HOST,news-client-search.apple.com,🍎 Apple
+HOST,news-client.apple.com,🍎 Apple
+HOST,news-edge.apple.com,🍎 Apple
+HOST,news-events.apple.com,🍎 Apple
+HOST-SUFFIX,apple.news,🍎 Apple
+# HOST-SUFFIX,c.apple.news,🍎 Apple
+HOST-SUFFIX,gsas.apple.com,🍎 Apple
+HOST-SUFFIX,newsletter-edge.apple.com,🍎 Apple
+USER-AGENT,AppleNews*,🍎 Apple
+USER-AGENT,com.apple.news*,🍎 Apple
+# USER-AGENT,News*,🍎 Apple
 
 # Apple TV
-HOST,hls-amt.itunes.apple.com,🍎 Apple服务
-HOST,hls.itunes.apple.com,🍎 Apple服务
-HOST,np-edge.itunes.apple.com,🍎 Apple服务
-HOST,play-edge.itunes.apple.com,🍎 Apple服务
-HOST,uts-api.itunes.apple.com,🍎 Apple服务
-HOST-SUFFIX,tv.apple.com,🍎 Apple服务
-USER-AGENT,AppleTV*,🍎 Apple服务
-USER-AGENT,com.apple.tv*,🍎 Apple服务
+HOST,hls-amt.itunes.apple.com,🍎 Apple
+HOST,hls.itunes.apple.com,🍎 Apple
+HOST,np-edge.itunes.apple.com,🍎 Apple
+HOST,play-edge.itunes.apple.com,🍎 Apple
+HOST,uts-api.itunes.apple.com,🍎 Apple
+HOST-SUFFIX,tv.apple.com,🍎 Apple
+USER-AGENT,AppleTV*,🍎 Apple
+USER-AGENT,com.apple.tv*,🍎 Apple
 # vod-ap3-aoc用于视频缓存，请按需设置规则,若要改为直连,将末尾的AppleTV改为direct即可
 HOST-SUFFIX,vod-ap3-aoc.tv.apple.com,DIRECT
