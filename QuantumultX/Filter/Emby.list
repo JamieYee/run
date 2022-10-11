@@ -1,0 +1,12 @@
+# NAME: Emby
+# 关键字匹配
+HOST-KEYWORD, emby, Emby
+
+# 终点站
+HOST, pub1.emby.wtf, Emby
+HOST, pub2.emby.wtf, Emby
+HOST, pub3.emby.wtf, Emby
+HOST, pub4.emby.wtf, Emby
+
+# 卷毛鼠
+HOST, cf.jmsooo.com, Emby
