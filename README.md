@@ -8,3 +8,6 @@ rm /etc/config/wizard
 删掉设置向导
 
 https://github.com/kenzok8/openwrt-packages
+
+Alist
+opkg print-architecture 查看系统架构
