@@ -132,6 +132,3 @@ IP-CIDR,45.254.48.1/32,IP
 IP-CIDR,59.111.160.195/32,IP
 IP-CIDR,59.111.19.33/32,IP
 IP-CIDR,59.111.19.53/32,IP
-
-# ======= 米游社 ======= #
-DOMAIN,bbs-api.mihoyo.com,IP
