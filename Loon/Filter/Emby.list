@@ -1,0 +1,12 @@
+# NAME: Emby
+# 关键字匹配
+DOMAIN-KEYWORD, emby
+
+# 终点站
+DOMAIN-SUFFIX, pub1.emby.wtf
+DOMAIN-SUFFIX, pub2.emby.wtf
+DOMAIN-SUFFIX, pub3.emby.wtf
+DOMAIN-SUFFIX, pub4.emby.wtf
+
+# 卷毛鼠
+DOMAIN-SUFFIX, cf.jmsooo.com
