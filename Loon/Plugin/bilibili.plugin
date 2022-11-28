@@ -1,5 +1,5 @@
 #!name=Bilibili去广告
-#!desc=Bilibili去广告
+#!desc=哔哩哔哩去广告
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/bili.png
 [Rule]
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
