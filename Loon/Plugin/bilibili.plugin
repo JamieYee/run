@@ -1,7 +1,5 @@
 #!name=Bilibili去广告
 #!desc=Bilibili去广告
-#!homepage=https://github.com/deezertidal
-#!author=ddgksf2013
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/bili.png
 [Rule]
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
