@@ -1,6 +1,6 @@
-#!name=YouTube去广告
-#!desc=YouTube去广告
-#!icon=https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/YouTube.png
+#!name=Google重定向
+#!desc=#!icon=https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/Google.png
+#!icon=https://raw.githubusercontent.com/Tartarus2014/For-own-use/master/Color/Google.png
 
 [URL Rewrite]
 #Youtube去广告
@@ -23,7 +23,7 @@
 # 非强制跳转
 # ^https:\/\/www\.google\.com\.hk\/.+ https://www.google.com/ncr 302
 # 强制跳转
-^https:\/\/www\.google\.com\.hk\/ https://www.google.com/ncr 302
+^https:\/\/www\.google\.com\.hk\/ https://www.google.com 302
 
 [MITM]
 hostname = *.google.co.jp,*.google.cn,*.google.com.hk,*.g.cn,-redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
