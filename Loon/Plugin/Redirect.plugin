@@ -1,20 +1,21 @@
-#!name=Google重定向
-#!desc=Google重定向
+#!name=GoogleRewrite
+#!desc=谷歌搜索重定向，将google.cn,google.h等重定向至google.com
 #!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
 
 [URL Rewrite]
-#Youtube去广告
-(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) $1$2$3 header
-^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad - reject
+#hostname=*.google.com.hk ,*.g.cn,*.google.cn ,*.google.co.jp
 
-^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break - reject
-^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads - reject
-^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) - reject
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext - reject
+#^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+#^https:\/\/www\.google\.co\.jp https://www.google.com 302
+#^https:\/\/www\.google\.com\.hk https://www.google.com 302
 
-#Google搜索中国，香港，日本重定向
-^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
+#6月版
 ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+^https:\/\/www\.google\.co\.jp https://www.google.com 302
+# 非强制跳转
+# ^https:\/\/www\.google\.com\.hk\/.+ https://www.google.com/ncr 302
+# 强制跳转
+^https:\/\/www\.google\.com\.hk\/ https://www.google.com/ncr 302
 
 [MITM]
-hostname =ditu.google.cn,google.cn,map.google.cn,www.google.cn,-redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.youtube.com,youtubei.googleapis.com
+hostname = *.google.com.hk ,*.g.cn,*.google.cn ,*.google.co.jp
