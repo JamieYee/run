@@ -21,6 +21,6 @@ DOMAIN-SUFFIX, 4837.misakaf.org
 
 # 1111
 #直连
-DOMAIN-SUFFIX, http://11.loseremby.org:80
+DOMAIN-SUFFIX, http://11.loseremby.org
 #CF代理
-DOMAIN-SUFFIX, http://cf.emby.ml:80
+DOMAIN-SUFFIX, http://cf.emby.ml
