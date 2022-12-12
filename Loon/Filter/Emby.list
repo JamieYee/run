@@ -10,3 +10,17 @@ DOMAIN-SUFFIX, pub4.emby.wtf
 
 # 卷毛鼠
 DOMAIN-SUFFIX, cf.jmsooo.com
+
+# MisakaF
+# Cloudflare线路(直连、挂梯都可)：
+DOMAIN-SUFFIX, https://cf.misakaf.org
+# HE+HKIX线路(必须亚洲地区梯子)：
+DOMAIN-SUFFIX, he.misakaf.org
+# 4837中转(优先直连)：
+DOMAIN-SUFFIX, 4837.misakaf.org
+
+# 1111
+#直连
+DOMAIN-SUFFIX, http://11.loseremby.org:80
+#CF代理
+DOMAIN-SUFFIX, http://cf.emby.ml:80
