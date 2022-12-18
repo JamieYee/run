@@ -24,3 +24,6 @@ DOMAIN-SUFFIX, 4837.misakaf.org
 DOMAIN-SUFFIX, http://11.loseremby.org
 #CF代理
 DOMAIN-SUFFIX, http://cf.emby.ml
+
+#TV直播
+DOMAIN-SUFFIX, epg.112114.xyz
