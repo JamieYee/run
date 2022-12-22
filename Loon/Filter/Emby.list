@@ -25,5 +25,8 @@ DOMAIN-SUFFIX, http://11.loseremby.org
 #CF代理
 DOMAIN-SUFFIX, http://cf.emby.ml
 
+#Polo
+DOMAIN-SUFFIX, http://df.poloemby.xyz
+
 #TV直播
 DOMAIN-SUFFIX, epg.112114.xyz
