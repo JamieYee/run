@@ -9,11 +9,12 @@ DOMAIN-SUFFIX, pub3.emby.wtf
 DOMAIN-SUFFIX, pub4.emby.wtf
 
 # 卷毛鼠
+DOMAIN-SUFFIX, ha.jmsooo.com
 DOMAIN-SUFFIX, cf.jmsooo.com
 
 # MisakaF
 # Cloudflare线路(直连、挂梯都可)：
-DOMAIN-SUFFIX, https://cf.misakaf.org
+DOMAIN-SUFFIX, cf.misakaf.org
 # HE+HKIX线路(必须亚洲地区梯子)：
 DOMAIN-SUFFIX, he.misakaf.org
 # 4837中转(优先直连)：
@@ -21,12 +22,12 @@ DOMAIN-SUFFIX, 4837.misakaf.org
 
 # 1111
 #直连
-DOMAIN-SUFFIX, http://11.loseremby.org
+DOMAIN-SUFFIX, 11.loseremby.org
 #CF代理
-DOMAIN-SUFFIX, http://cf.emby.ml
+DOMAIN-SUFFIX, cf.emby.ml
 
 #Polo
-DOMAIN-SUFFIX, http://df.poloemby.xyz
+DOMAIN-SUFFIX, df.poloemby.xyz
 
 #TV直播
 DOMAIN-SUFFIX, epg.112114.xyz
