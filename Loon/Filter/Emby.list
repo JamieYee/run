@@ -19,6 +19,8 @@ DOMAIN-SUFFIX, cf.misakaf.org
 DOMAIN-SUFFIX, he.misakaf.org
 # 4837中转(优先直连)：
 DOMAIN-SUFFIX, 4837.misakaf.org
+#Vip
+DOMAIN-SUFFIX, embyvip.misakaf.org
 
 # 1111
 #直连
