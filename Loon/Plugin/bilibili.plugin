@@ -1,5 +1,7 @@
 #!name=哔哩哔哩去广告
-#!desc=哔哩哔哩去广告
+#!desc=过滤广告并增强
+#!author = 易大宝
+#!homepage = https://github.com/yishangfei/run/tree/main/Loon/Plugin
 #!icon=https://raw.githubusercontent.com/deezertidal/private/main/icons/bili.png
 [Rule]
 DOMAIN-SUFFIX,cm.bilibili.com,REJECT
