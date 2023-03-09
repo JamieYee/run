@@ -10,25 +10,25 @@ HOST, pub4.emby.wtf, Emby
 
 # 卷毛鼠
 HOST, cf.jmsooo.com, Emby
-HOST, cf.jmsooo.com
+HOST, cf.jmsooo.com, Emby
 # MisakaF
 # Cloudflare线路(直连、挂梯都可)：
-HOST, cf.misakaf.org
+HOST, cf.misakaf.org, Emby
 # HE+HKIX线路(必须亚洲地区梯子)：
-HOST, he.misakaf.org
+HOST, he.misakaf.org, Emby
 # 4837中转(优先直连)：
-HOST, 4837.misakaf.org
+HOST, 4837.misakaf.org, Emby
 #Vip
-HOST, embyvip.misakaf.org
+HOST, embyvip.misakaf.org, Emby
 
 # 1111
 #直连
-HOST, 11.loseremby.org
+HOST, 11.loseremby.org, Emby
 #CF代理
-HOST, cf.emby.ml
+HOST, cf.emby.ml, Emby
 
 #Polo
-HOST, df.poloemby.xyz
+HOST, df.poloemby.xyz, Emby
 
 #TV直播
-HOST, epg.112114.xyz
+HOST, epg.112114.xyz, Emby
