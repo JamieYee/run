@@ -14,3 +14,10 @@ sudo raspi-config Interfacing Options
 树莓派快速安装portainer中文版
 
 docker run -d --restart=always --name="portainer" -p 9000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data 6053537/portainer-ce:linux-arm64
+
+树莓派安装Docker-compose
+sudo curl -L "https://github.com/docker/compose/releases/download/v2.17.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+添加可执行权限
+sudo chmod +x /usr/local/bin/docker-compose
+测试安装结果
+docker-compose --version
