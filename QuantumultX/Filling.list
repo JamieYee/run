@@ -22,3 +22,5 @@ HOST-SUFFIX,zerotier.com, Global
 HOST-SUFFIX,docker.com, Global
 # 中银香港
 HOST-SUFFIX,bochk.com, Global
+# 汇丰
+HOST-SUFFIX,hsbc.com.hk, Global
