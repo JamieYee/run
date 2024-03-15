@@ -15,8 +15,10 @@ ip-cidr, 224.0.0.0/24, direct
 ip-cidr, 182.254.116.0/24, direct
 
 #Flutter
-HOST-SUFFIX,pub.dev, Emby
+HOST-SUFFIX,pub.dev, Global
 # zerotier
-HOST-SUFFIX,zerotier.com, Emby
+HOST-SUFFIX,zerotier.com, Global
 # docker
-HOST-SUFFIX,docker.com, Emby
+HOST-SUFFIX,docker.com, Global
+# 中银香港
+HOST-SUFFIX,bochk.com, Global
