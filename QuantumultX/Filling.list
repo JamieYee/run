@@ -27,3 +27,6 @@ HOST-SUFFIX,hsbc.com.hk, Global
 
 # 星城租房
 HOST-SUFFIX,pglstatp-toutiao.com, reject
+
+# 北京时间
+HOST-SUFFIX,time.is, Global
