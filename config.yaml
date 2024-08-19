@@ -220,13 +220,14 @@ rules:
   - RULE-SET, anti-AD-white, ⚠️广告拦截
   - RULE-SET, Lan, DIRECT
   - RULE-SET, Direct, DIRECT
-  - RULE-SET, Proxy, 🚀节点选择
+
   - RULE-SET, ChinaDownloadCDN, DIRECT
   - RULE-SET, InternationalDownloadCDN, 🌍全球服务
   - RULE-SET, AI, 💬OpenAI
   - RULE-SET, Microsoft, 🖥️Microsoft
   - RULE-SET, Google, 🌍全球服务
   - RULE-SET, Telegram, 📟Telegram
+  - RULE-SET, Proxy, 🚀节点选择
   - RULE-SET, ESET_China, DIRECT
     # OpenAI 跟踪域名
   - DOMAIN-SUFFIX,o33249.ingest.sentry.io,⚠️广告拦截
