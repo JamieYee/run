@@ -219,7 +219,7 @@ rule-providers:
 
 # 规则指向
 rules:
-  - AND,((RULE-SET,anti-AD),(NOT,((RULE-SET,anti-AD-white)))),⚠️广告拦截 # 感谢 Telegram @nextyahooquery 提供的建议
+  - RULE-SET, anti-AD-white, ⚠️广告拦截
   - RULE-SET, Lan, DIRECT
   - RULE-SET, Direct, DIRECT
   - RULE-SET, Proxy, 🚀节点选择
