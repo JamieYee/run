@@ -1,5 +1,5 @@
 # mihomo 配置
-# 日期：2024-06-26 15:31:03
+# 日期：2024-11-01 13:25:28
 # 配置作者：https://t.me/iKeLee
 # 适用版本：所有使用 mihomo 核心的程序
 port: 7890
@@ -28,8 +28,8 @@ external-controller: 0.0.0.0:9090
 # external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
 
 geox-url:
-  geoip: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat'
-  geosite: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat'
+  # geoip: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat'
+  # geosite: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat'
   mmdb: 'https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb'
   asn: 'https://gitlab.com/Loon0x00/loon_data/-/raw/main/geo/GeoLite2-ASN.mmdb'
 
@@ -81,14 +81,11 @@ dns:
     - https://223.6.6.6/dns-query#h3=true
 
 # 锚点 - 节点订阅的参数 [每小时更新一次订阅节点，每 6 秒一次健康检查]
-NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, url: 'http://cp.cloudflare.com', interval: 6}}
+NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, url: 'http://www.google.com/blank.html', interval: 6}}
 
 # 锚点 - 节点订阅
 proxy-providers: 
-  YTOO:
-    url: '机场1的订阅URL'
-    <<: *NodeParam
-    path: './proxy_providers/YTOO.yaml'
+
 
 # 锚点 - 节点筛选组
 FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -97,31 +94,25 @@ FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼�
 FilterKR: &FilterKR '^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
 FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
 FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterUK: &FilterUK '^(?=.*((?i)🇬🇧|英国|伦敦|(\b(UK|United Kingdom)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterFR: &FilterFR '^(?=.*((?i)🇫🇷|法国|(\b(FR|France)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterDE: &FilterDE '^(?=.*((?i)🇩🇪|德国|(\b(DE|Germany)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterGame: &FilterGame '^(?=.*((?i)游戏|🎮|(\b(GAME)\b)))(?!.*((?i)回国|校园)).*$'
+FilterXJJ: &FilterXJJ '^(?=.*熊啾啾).*'
 FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
 
 # 策略组参数锚点
 # 锚点 - 时延优选参数 [每 6 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://www.google.com/blank.html', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
 # 锚点 - 故障转移参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-FallBack: &FallBack {type: fallback, interval: 6, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+FallBack: &FallBack {type: fallback, interval: 6, lazy: true, url: 'http://www.google.com/blank.html', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
 # 锚点 - 负载均衡参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-LoadBalance: &LoadBalance {type: load-balance, interval: 6, lazy: true, url: 'http://cp.cloudflare.com', disable-udp: false, strategy: consistent-hashing, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+LoadBalance: &LoadBalance {type: load-balance, interval: 6, lazy: true, url: 'http://www.google.com/blank.html', disable-udp: false, strategy: consistent-hashing, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
 # 锚点 - 规则参数 [每小时更新一次订阅规则，更新规则时使用直连策略]
 RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, format: yaml, proxy: DIRECT}
 
 # 策略组
 proxy-groups: 
-  - {name: 🚀节点选择, type: select, include-all-providers: true, filter: *FilterAll}
-  - {name: 🌍全球服务, type: select, proxies: [🚀节点选择]}
-  - {name: 💬OpenAI, type: select, include-all-providers: true, filter: *FilterAll, proxies: [美国策略, 台湾策略, 日本策略, 韩国策略, 新国策略 ]}
-  - {name: 📟Telegram, type: select, proxies: [香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略, 🚀节点选择]}
-  - {name: 🖥️Microsoft, type: select, proxies: [DIRECT, 🚀节点选择]}
-  - {name: ⚠️广告拦截, type: select, proxies: [REJECT, DIRECT, 🚀节点选择] }
-  - {name: 🦈漏网之鱼, type: select, proxies: [🚀节点选择, DIRECT]}
+  - {name: AI, type: select, include-all-providers: true, filter: *FilterXJJ}
+  - {name: Telegram, type: select, proxies: [香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略]}
+  - {name: Microsoft, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略]}
+  - {name: 兜底策略, type: select, proxies: [香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略, DIRECT]}
 
   - {name: 香港策略, type: select, proxies: [⏱香港时延优选策略组, 🚥香港故障转移策略组, 🎛香港负载均衡策略组]}
   - {name: 台湾策略, type: select, proxies: [⏱台湾时延优选策略组, 🚥台湾故障转移策略组, 🎛台湾负载均衡策略组]}
@@ -129,6 +120,9 @@ proxy-groups:
   - {name: 韩国策略, type: select, proxies: [⏱韩国时延优选策略组, 🚥韩国故障转移策略组, 🎛韩国负载均衡策略组]}
   - {name: 新国策略, type: select, proxies: [⏱新国时延优选策略组, 🚥新国故障转移策略组, 🎛新国负载均衡策略组]}
   - {name: 美国策略, type: select, proxies: [⏱美国时延优选策略组, 🚥美国故障转移策略组, 🎛美国负载均衡策略组]}
+  - {name: 英国策略, type: select, proxies: [⏱英国时延优选策略组, 🚥英国故障转移策略组, 🎛英国负载均衡策略组]}
+  - {name: 法国策略, type: select, proxies: [⏱法国时延优选策略组, 🚥法国故障转移策略组, 🎛法国负载均衡策略组]}
+  - {name: 德国策略, type: select, proxies: [⏱德国时延优选策略组, 🚥德国故障转移策略组, 🎛德国负载均衡策略组]}
 
 # 时延优选策略组
   - {name: ⏱香港时延优选策略组, <<: *UrlTest, filter: *FilterHK}
@@ -137,6 +131,9 @@ proxy-groups:
   - {name: ⏱韩国时延优选策略组, <<: *UrlTest, filter: *FilterKR}
   - {name: ⏱新国时延优选策略组, <<: *UrlTest, filter: *FilterSG}
   - {name: ⏱美国时延优选策略组, <<: *UrlTest, filter: *FilterUS}
+  - {name: ⏱英国时延优选策略组, <<: *UrlTest, filter: *FilterUK}
+  - {name: ⏱法国时延优选策略组, <<: *UrlTest, filter: *FilterFR}
+  - {name: ⏱德国时延优选策略组, <<: *UrlTest, filter: *FilterDE}
 
 # 故障转移策略组
   - {name: 🚥香港故障转移策略组, <<: *FallBack, filter: *FilterHK}
@@ -145,6 +142,9 @@ proxy-groups:
   - {name: 🚥韩国故障转移策略组, <<: *FallBack, filter: *FilterKR}
   - {name: 🚥新国故障转移策略组, <<: *FallBack, filter: *FilterSG}
   - {name: 🚥美国故障转移策略组, <<: *FallBack, filter: *FilterUS}
+  - {name: 🚥英国故障转移策略组, <<: *FallBack, filter: *FilterUK}
+  - {name: 🚥法国故障转移策略组, <<: *FallBack, filter: *FilterFR}
+  - {name: 🚥德国故障转移策略组, <<: *FallBack, filter: *FilterDE}
 
 # 负载均衡策略组
   - {name: 🎛香港负载均衡策略组, <<: *LoadBalance, filter: *FilterHK}
@@ -153,85 +153,74 @@ proxy-groups:
   - {name: 🎛韩国负载均衡策略组, <<: *LoadBalance, filter: *FilterKR}
   - {name: 🎛新国负载均衡策略组, <<: *LoadBalance, filter: *FilterSG}
   - {name: 🎛美国负载均衡策略组, <<: *LoadBalance, filter: *FilterUS}
+  - {name: 🎛英国负载均衡策略组, <<: *LoadBalance, filter: *FilterUK}
+  - {name: 🎛法国负载均衡策略组, <<: *LoadBalance, filter: *FilterFR}
+  - {name: 🎛德国负载均衡策略组, <<: *LoadBalance, filter: *FilterDE}
 
 # 订阅规则
 rule-providers:
-  # anti-AD 白名单规则
-  anti-AD-white:
-    type: http
-    behavior: domain
-    format: yaml
-    # path可为空(仅限clash.meta 1.15.0以上版本)
-    path: ./rule_provider/anti-AD-white.yaml
-    url: "https://raw.githubusercontent.com/privacy-protection-tools/dead-horse/master/anti-ad-white-for-clash.yaml?"
-    interval: 600
   Lan:
     <<: *RuleProviders
     path: './rules/Lan.yaml'
-    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Lan/Lan.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml'
 
   Direct:
     <<: *RuleProviders
     path: './rules/Direct.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/Direct.yaml'
-
-  ChinaDownloadCDN:
-    <<: *RuleProviders
-    path: './rules/ChinaDownloadCDN.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/ChinaDownloadCDN.yaml'
-
-  InternationalDownloadCDN:
-    <<: *RuleProviders
-    path: './rules/InternationalDownloadCDN.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/InternationalDownloadCDN.yaml'
-
-  AI:
-    <<: *RuleProviders
-    path: './rules/AI.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AI.yaml'
-
-  Microsoft:
-    <<: *RuleProviders
-    path: './rules/Microsoft.yaml'
-    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Microsoft/Microsoft.yaml'
-
-  Google:
-    <<: *RuleProviders
-    path: './rules/Google.yaml'
-    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Google/Google.yaml'
-
-  Telegram:
-    <<: *RuleProviders
-    path: './rules/Telegram.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/Telegram.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/Direct.yaml'
 
   Proxy:
     <<: *RuleProviders
     path: './rules/Proxy.yaml'
-    url: 'https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/ProxyGFWlist.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/Proxy.yaml'
+
+  ChinaDownloadCDN:
+    <<: *RuleProviders
+    path: './rules/ChinaDownloadCDN.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/ChinaDownloadCDN.yaml'
+
+  AI:
+    <<: *RuleProviders
+    path: './rules/AI.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/AI.yaml'
+
+  iCloudChina:
+    <<: *RuleProviders
+    path: './rules/iCloudChina.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/iCloudChina.yaml'
+
+  Microsoft:
+    <<: *RuleProviders
+    path: './rules/Microsoft.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml'
+
+  Google:
+    <<: *RuleProviders
+    path: './rules/Google.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml'
+
+  Telegram:
+    <<: *RuleProviders
+    path: './rules/Telegram.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/Telegram.yaml'
 
   ESET_China:
     <<: *RuleProviders
     path: './rules/ESET_China.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/ESET_China.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/ESET_China.yaml'
 
 # 规则指向
 rules:
-  - RULE-SET, anti-AD-white, ⚠️广告拦截
   - RULE-SET, Lan, DIRECT
   - RULE-SET, Direct, DIRECT
-
+  - RULE-SET, Proxy, 兜底策略
   - RULE-SET, ChinaDownloadCDN, DIRECT
-  - RULE-SET, InternationalDownloadCDN, 🌍全球服务
-  - RULE-SET, AI, 💬OpenAI
-  - RULE-SET, Microsoft, 🖥️Microsoft
-  - RULE-SET, Google, 🌍全球服务
-  - RULE-SET, Telegram, 📟Telegram
-  - RULE-SET, Proxy, 🚀节点选择
+  - RULE-SET, AI, AI
+  - RULE-SET, Steam, 兜底策略
+  - RULE-SET, iCloudChina, DIRECT
+  - RULE-SET, Microsoft, Microsoft
+  - RULE-SET, Google, 兜底策略
+  - RULE-SET, Telegram, Telegram
   - RULE-SET, ESET_China, DIRECT
-    # OpenAI 跟踪域名
-  - DOMAIN-SUFFIX,o33249.ingest.sentry.io,⚠️广告拦截
-  - DOMAIN-SUFFIX,openaicom.imgix.net,⚠️广告拦截
   - GEOIP, CN, DIRECT
-  - GEOSITE,CN,DIRECT
-  - MATCH, 🦈漏网之鱼
+  - MATCH, 兜底策略
