@@ -83,13 +83,6 @@ dns:
 # 锚点 - 节点订阅的参数 [每小时更新一次订阅节点，每 6 秒一次健康检查]
 NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, url: 'http://www.google.com/blank.html', interval: 6}}
 
-# 锚点 - 节点订阅
-proxy-providers: 
-  ladder:
-    url: '机场1的订阅URL'
-    <<: *NodeParam
-    path: './proxy_providers/ladder.yaml'
-
 # 锚点 - 节点筛选组
 FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
 FilterTW: &FilterTW '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
