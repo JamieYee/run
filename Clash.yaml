@@ -120,9 +120,6 @@ proxy-groups:
   - {name: 韩国策略, type: select, proxies: [⏱韩国时延优选策略组, 🚥韩国故障转移策略组, 🎛韩国负载均衡策略组]}
   - {name: 新国策略, type: select, proxies: [⏱新国时延优选策略组, 🚥新国故障转移策略组, 🎛新国负载均衡策略组]}
   - {name: 美国策略, type: select, proxies: [⏱美国时延优选策略组, 🚥美国故障转移策略组, 🎛美国负载均衡策略组]}
-  - {name: 英国策略, type: select, proxies: [⏱英国时延优选策略组, 🚥英国故障转移策略组, 🎛英国负载均衡策略组]}
-  - {name: 法国策略, type: select, proxies: [⏱法国时延优选策略组, 🚥法国故障转移策略组, 🎛法国负载均衡策略组]}
-  - {name: 德国策略, type: select, proxies: [⏱德国时延优选策略组, 🚥德国故障转移策略组, 🎛德国负载均衡策略组]}
 
 # 时延优选策略组
   - {name: ⏱香港时延优选策略组, <<: *UrlTest, filter: *FilterHK}
@@ -131,9 +128,6 @@ proxy-groups:
   - {name: ⏱韩国时延优选策略组, <<: *UrlTest, filter: *FilterKR}
   - {name: ⏱新国时延优选策略组, <<: *UrlTest, filter: *FilterSG}
   - {name: ⏱美国时延优选策略组, <<: *UrlTest, filter: *FilterUS}
-  - {name: ⏱英国时延优选策略组, <<: *UrlTest, filter: *FilterUK}
-  - {name: ⏱法国时延优选策略组, <<: *UrlTest, filter: *FilterFR}
-  - {name: ⏱德国时延优选策略组, <<: *UrlTest, filter: *FilterDE}
 
 # 故障转移策略组
   - {name: 🚥香港故障转移策略组, <<: *FallBack, filter: *FilterHK}
@@ -142,9 +136,6 @@ proxy-groups:
   - {name: 🚥韩国故障转移策略组, <<: *FallBack, filter: *FilterKR}
   - {name: 🚥新国故障转移策略组, <<: *FallBack, filter: *FilterSG}
   - {name: 🚥美国故障转移策略组, <<: *FallBack, filter: *FilterUS}
-  - {name: 🚥英国故障转移策略组, <<: *FallBack, filter: *FilterUK}
-  - {name: 🚥法国故障转移策略组, <<: *FallBack, filter: *FilterFR}
-  - {name: 🚥德国故障转移策略组, <<: *FallBack, filter: *FilterDE}
 
 # 负载均衡策略组
   - {name: 🎛香港负载均衡策略组, <<: *LoadBalance, filter: *FilterHK}
@@ -153,9 +144,6 @@ proxy-groups:
   - {name: 🎛韩国负载均衡策略组, <<: *LoadBalance, filter: *FilterKR}
   - {name: 🎛新国负载均衡策略组, <<: *LoadBalance, filter: *FilterSG}
   - {name: 🎛美国负载均衡策略组, <<: *LoadBalance, filter: *FilterUS}
-  - {name: 🎛英国负载均衡策略组, <<: *LoadBalance, filter: *FilterUK}
-  - {name: 🎛法国负载均衡策略组, <<: *LoadBalance, filter: *FilterFR}
-  - {name: 🎛德国负载均衡策略组, <<: *LoadBalance, filter: *FilterDE}
 
 # 订阅规则
 rule-providers:
