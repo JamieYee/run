@@ -85,12 +85,10 @@ NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, 
 
 # 锚点 - 节点订阅
 proxy-providers: 
-  机场名称1:
+  ladder:
     url: '机场1的订阅URL'
     <<: *NodeParam
-    path: './proxy_providers/机场名称1.yaml'
-    override:
-      additional-prefix: "[机场名称1] " # 为订阅节点添加机场名称前缀
+    path: './proxy_providers/ladder.yaml'
 
 # 锚点 - 节点筛选组
 FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
