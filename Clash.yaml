@@ -84,11 +84,14 @@ dns:
 # 锚点 - 节点订阅的参数 [每小时更新一次订阅节点，每 6 秒一次健康检查]
 NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, url: 'http://www.google.com/blank.html', interval: 6}}
 
+# 锚点 - 节点订阅
 proxy-providers: 
-  ladder:
-    url: '订阅地址'
+  机场名称1:
+    url: '机场1的订阅URL'
     <<: *NodeParam
-    path: './proxy_providers/ladder.yaml'
+    path: './proxy_providers/机场名称1.yaml'
+    override:
+      additional-prefix: "[机场名称1] " # 为订阅节点添加机场名称前缀
 
 # 锚点 - 节点筛选组
 FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -113,8 +116,8 @@ RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, 
 # 策略组
 proxy-groups: 
   - {name: 自动选择, type: url-test, include-all: true, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Auto.png}
-  - {name: 节点选择, type: select, include-all-providers: true, filter: *FilterXJJ,icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
-  - {name: OpenAI, type: select, filter: *FilterXJJ, proxies: [⏱新国时延优选策略组], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
+  - {name: 节点选择, type: select, proxies: [自动选择,⏱香港时延优选策略组, ⏱新国时延优选策略组, FilterXJJ],icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
+  - {name: OpenAI, type: select, proxies: [⏱新国时延优选策略组, FilterXJJ], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
   - {name: Telegram, type: select, proxies: [节点选择,⏱新国时延优选策略组, ⏱美国时延优选策略组], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png}
   - {name: Microsoft, type: select, proxies: [DIRECT, 节点选择], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
   - {name: 漏网之鱼, type: select, proxies: [节点选择, DIRECT], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png}
