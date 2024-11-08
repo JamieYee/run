@@ -28,8 +28,8 @@ external-controller: 0.0.0.0:9090
 # external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
 
 geox-url:
-  # geoip: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geoip.dat'
-  # geosite: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat'
+  geoip: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat
+  geosite: https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat
   mmdb: 'https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb'
   asn: 'https://gitlab.com/Loon0x00/loon_data/-/raw/main/geo/GeoLite2-ASN.mmdb'
 
@@ -54,7 +54,18 @@ sniffer:
     - +.v2ex.com
 
   skip-domain:
-    - Mijia Cloud
+    - 'rule-set:cn_domain,private_domain'
+    - 'Mijia Cloud'
+    - '+.push.apple.com'
+    - '+.wechat.com'
+    - '+.qpic.cn'
+    - '+.qq.com'
+    - '+.wechatapp.com'
+    #  语音通信
+    - '+.vivox.com'
+    # 向日葵服务
+    - '+.oray.com'
+    - '+.sunlogin.net'
 
 tun:
   enable: true
@@ -66,20 +77,22 @@ tun:
 
 dns:
   enable: true
-  listen: 0.0.0.0:1053
   ipv6: true
+  respect-rules: false
   enhanced-mode: fake-ip
-  fake-ip-range: 28.0.0.1/8
+  fake-ip-range: 198.18.0.1/16
+  default-nameserver: ['119.29.29.29', '223.5.5.5']
+  nameserver: ['https://dns.ipv4dns.com/dns-query','https://doh.pub/dns-query', 'https://dns.alidns.com/dns-query']
   fake-ip-filter:
+    - "rule-set:cn_domain,private_domain,fix-direct"
     - "*"
-    - +.lan
-  default-nameserver:
-    - 223.5.5.5
-    - 223.6.6.6
-  nameserver:
-    - https://dns.ipv4dns.com/dns-query
-    - https://223.5.5.5/dns-query#h3=true
-    - https://223.6.6.6/dns-query#h3=true
+    - "*.lan"
+    - "*.local"
+    - "*.home.arpa"
+    - "+.gitv.tv"
+    - "+.docker.io"
+    - "+.miwifi.com"
+    - "+.safebrowsing.apple"
 
 # 锚点 - 节点订阅的参数 [每小时更新一次订阅节点，每 6 秒一次健康检查]
 NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, url: 'http://www.google.com/blank.html', interval: 6}}
@@ -90,8 +103,6 @@ proxy-providers:
     url: '机场1的订阅URL'
     <<: *NodeParam
     path: './proxy_providers/机场名称1.yaml'
-    override:
-      additional-prefix: "[机场名称1] " # 为订阅节点添加机场名称前缀
 
 # 锚点 - 节点筛选组
 FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
@@ -100,10 +111,9 @@ FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼�
 FilterKR: &FilterKR '^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
 FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
 FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
-FilterXJJ: &FilterXJJ '^(?=.*熊啾啾).*'
 FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
 
-# 策略组参数锚点
+# 参数锚点
 # 锚点 - 时延优选参数 [每 6 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
 UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://www.google.com/blank.html', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
 # 锚点 - 故障转移参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
@@ -113,38 +123,38 @@ LoadBalance: &LoadBalance {type: load-balance, interval: 6, lazy: true, url: 'ht
 # 锚点 - 规则参数 [每小时更新一次订阅规则，更新规则时使用直连策略]
 RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, format: yaml, proxy: DIRECT}
 
-# 策略组
+# 
 proxy-groups: 
   - {name: 自动选择, type: url-test, include-all: true, filter: *FilterAll, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Auto.png}
-  - {name: 节点选择, type: select, proxies: [自动选择,⏱香港时延优选策略组, ⏱新国时延优选策略组],filter: *FilterXJJ,icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
-  - {name: OpenAI, type: select, proxies: [⏱新国时延优选策略组,*FilterXJJ], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
-  - {name: Telegram, type: select, proxies: [节点选择,⏱新国时延优选策略组, ⏱美国时延优选策略组], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png}
+  - {name: 节点选择, type: select, proxies: [自动选择 , 香港时延优选, 新国时延优选, 熊啾啾], icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
+  - {name: ChatGPT, type: select, proxies: [新国时延优选, 熊啾啾], icon:  https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png}
+  - {name: Telegram, type: select, proxies: [节点选择,新国时延优选, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png}
   - {name: Microsoft, type: select, proxies: [DIRECT, 节点选择], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
   - {name: 漏网之鱼, type: select, proxies: [节点选择, DIRECT], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png}
 
-# 时延优选策略组
-  - {name: ⏱香港时延优选策略组, <<: *UrlTest, filter: *FilterHK}
-  - {name: ⏱台湾时延优选策略组, <<: *UrlTest, filter: *FilterTW}
-  - {name: ⏱日本时延优选策略组, <<: *UrlTest, filter: *FilterJP}
-  - {name: ⏱韩国时延优选策略组, <<: *UrlTest, filter: *FilterKR}
-  - {name: ⏱新国时延优选策略组, <<: *UrlTest, filter: *FilterSG}
-  - {name: ⏱美国时延优选策略组, <<: *UrlTest, filter: *FilterUS}
+# 时延优选
+  - {name: 香港时延优选, <<: *UrlTest, filter: *FilterHK}
+  - {name: 台湾时延优选, <<: *UrlTest, filter: *FilterTW}
+  - {name: 日本时延优选, <<: *UrlTest, filter: *FilterJP}
+  - {name: 韩国时延优选, <<: *UrlTest, filter: *FilterKR}
+  - {name: 新国时延优选, <<: *UrlTest, filter: *FilterSG}
+  - {name: 美国时延优选, <<: *UrlTest, filter: *FilterUS}
 
-# 故障转移策略组
-  - {name: 🚥香港故障转移策略组, <<: *FallBack, filter: *FilterHK}
-  - {name: 🚥台湾故障转移策略组, <<: *FallBack, filter: *FilterTW}
-  - {name: 🚥日本故障转移策略组, <<: *FallBack, filter: *FilterJP}
-  - {name: 🚥韩国故障转移策略组, <<: *FallBack, filter: *FilterKR}
-  - {name: 🚥新国故障转移策略组, <<: *FallBack, filter: *FilterSG}
-  - {name: 🚥美国故障转移策略组, <<: *FallBack, filter: *FilterUS}
+# 故障转移
+  - {name: 香港故障转移, <<: *FallBack, filter: *FilterHK}
+  - {name: 台湾故障转移, <<: *FallBack, filter: *FilterTW}
+  - {name: 日本故障转移, <<: *FallBack, filter: *FilterJP}
+  - {name: 韩国故障转移, <<: *FallBack, filter: *FilterKR}
+  - {name: 新国故障转移, <<: *FallBack, filter: *FilterSG}
+  - {name: 美国故障转移, <<: *FallBack, filter: *FilterUS}
 
-# 负载均衡策略组
-  - {name: 🎛香港负载均衡策略组, <<: *LoadBalance, filter: *FilterHK}
-  - {name: 🎛台湾负载均衡策略组, <<: *LoadBalance, filter: *FilterTW}
-  - {name: 🎛日本负载均衡策略组, <<: *LoadBalance, filter: *FilterJP}
-  - {name: 🎛韩国负载均衡策略组, <<: *LoadBalance, filter: *FilterKR}
-  - {name: 🎛新国负载均衡策略组, <<: *LoadBalance, filter: *FilterSG}
-  - {name: 🎛美国负载均衡策略组, <<: *LoadBalance, filter: *FilterUS}
+# 负载均衡
+  - {name: 香港负载均衡, <<: *LoadBalance, filter: *FilterHK}
+  - {name: 台湾负载均衡, <<: *LoadBalance, filter: *FilterTW}
+  - {name: 日本负载均衡, <<: *LoadBalance, filter: *FilterJP}
+  - {name: 韩国负载均衡, <<: *LoadBalance, filter: *FilterKR}
+  - {name: 新国负载均衡, <<: *LoadBalance, filter: *FilterSG}
+  - {name: 美国负载均衡, <<: *LoadBalance, filter: *FilterUS}
 
 # 订阅规则
 rule-providers:
@@ -204,7 +214,7 @@ rules:
   - RULE-SET, Direct, DIRECT
   - RULE-SET, Proxy, 漏网之鱼
   - RULE-SET, ChinaDownloadCDN, DIRECT
-  - RULE-SET, AI, OpenAI
+  - RULE-SET, AI, ChatGPT
   - RULE-SET, iCloudChina, DIRECT
   - RULE-SET, Microsoft, Microsoft
   - RULE-SET, Google, 漏网之鱼
