@@ -116,8 +116,8 @@ RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, 
 # 策略组
 proxy-groups: 
   - {name: 自动选择, type: url-test, include-all: true, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Auto.png}
-  - {name: 节点选择, type: select, proxies: [自动选择,⏱香港时延优选策略组, ⏱新国时延优选策略组, FilterXJJ],icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
-  - {name: OpenAI, type: select, proxies: [⏱新国时延优选策略组, FilterXJJ], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
+  - {name: 节点选择, type: select, proxies: [自动选择,⏱香港时延优选策略组, ⏱新国时延优选策略组],filter: *FilterAll,icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
+  - {name: OpenAI, type: select, proxies: [⏱新国时延优选策略组],filter: *FilterAll, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
   - {name: Telegram, type: select, proxies: [节点选择,⏱新国时延优选策略组, ⏱美国时延优选策略组], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png}
   - {name: Microsoft, type: select, proxies: [DIRECT, 节点选择], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
   - {name: 漏网之鱼, type: select, proxies: [节点选择, DIRECT], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png}
