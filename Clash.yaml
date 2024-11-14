@@ -122,6 +122,8 @@ UrlTest: &UrlTest {type: url-test, interval: 50, tolerance: 300, lazy: true, url
 FallBack: &FallBack {type: fallback, interval: 50, lazy: true, url: 'http://www.google.com/blank.html', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all: true}
 # 锚点 - 负载均衡参数 [每 50 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
 LoadBalance: &LoadBalance {type: load-balance, interval: 50, lazy: true, url: 'http://www.google.com/blank.html', disable-udp: false, strategy: consistent-hashing, timeout: 2000, max-failed-times: 3, hidden: true, include-all: true}
+# 锚点 - 规则参数 [每小时更新一次订阅规则，更新规则时使用直连策略]
+RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, format: yaml, proxy: 节点选择}
 
 # 策略组
 proxy-groups: 
