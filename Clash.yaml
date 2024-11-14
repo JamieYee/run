@@ -168,25 +168,10 @@ rule-providers:
     path: './rules/Direct.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/Direct.yaml'
 
-  Proxy:
-    <<: *RuleProviders
-    path: './rules/Proxy.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/Proxy.yaml'
-
-  ChinaDownloadCDN:
-    <<: *RuleProviders
-    path: './rules/ChinaDownloadCDN.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/ChinaDownloadCDN.yaml'
-
   AI:
     <<: *RuleProviders
     path: './rules/AI.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/AI.yaml'
-
-  iCloudChina:
-    <<: *RuleProviders
-    path: './rules/iCloudChina.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/iCloudChina.yaml'
 
   Microsoft:
     <<: *RuleProviders
@@ -203,22 +188,79 @@ rule-providers:
     path: './rules/Telegram.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/Telegram.yaml'
 
+  Global:
+    <<: *RuleProviders
+    path: './rules/Global.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.yaml'
+
+  GlobalMedia:
+    <<: *RuleProviders
+    path: './rules/GlobalMedia.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.yaml'
+
+  Proxy:
+    <<: *RuleProviders
+    path: './rules/Proxy.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy.yaml'
+
+  ChinaDownloadCDN:
+    <<: *RuleProviders
+    path: './rules/ChinaDownloadCDN.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/ChinaDownloadCDN.yaml'
+    
+  WeChat:
+    <<: *RuleProviders
+    path: './rules/WeChat.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml'
+
+  ChinaMax:
+    <<: *RuleProviders
+    path: './rules/ChinaMax.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.yaml'
+
+  ChinaMax_IP:
+    <<: *RuleProviders
+    path: './rules/ChinaMax_IP.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_IP.yaml'
+
+  ChinaMedia:
+    <<: *RuleProviders
+    path: './rules/ChinaMedia.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMedia/ChinaMedia.yaml'
+    
+  iCloudChina:
+    <<: *RuleProviders
+    path: './rules/iCloudChina.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/iCloudChina.yaml'
+
   ESET_China:
     <<: *RuleProviders
     path: './rules/ESET_China.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/ESET_China.yaml'
 
+  Privacy:
+    <<: *RuleProviders
+    path: './rules/Privacy.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy.yaml'
+
 # 规则指向
 rules:
   - RULE-SET, Lan, DIRECT
   - RULE-SET, Direct, DIRECT
-  - RULE-SET, Proxy, 漏网之鱼
-  - RULE-SET, ChinaDownloadCDN, DIRECT
   - RULE-SET, AI, ChatGPT
-  - RULE-SET, iCloudChina, DIRECT
   - RULE-SET, Microsoft, Microsoft
-  - RULE-SET, Google, 漏网之鱼
   - RULE-SET, Telegram, Telegram
+  - RULE-SET, Global, 节点选择
+  - RULE-SET, GlobalMedia, 节点选择
+  - RULE-SET, Proxy, 节点选择
+  - RULE-SET, Google, 节点选择
+  - RULE-SET, WeChat, DIRECT
+  - RULE-SET, ChinaMax, DIRECT
+  - RULE-SET, ChinaMax_IP, DIRECT
+  - RULE-SET, ChinaMedia, DIRECT
+  - RULE-SET, ChinaDownloadCDN, DIRECT
+  - RULE-SET, iCloudChina, DIRECT
   - RULE-SET, ESET_China, DIRECT
+  - RULE-SET, Privacy, REJECT
   - GEOIP, CN, DIRECT
   - MATCH, 漏网之鱼
