@@ -169,6 +169,11 @@ rule-providers:
     path: './rules/Direct.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/Direct.yaml'
 
+  Personal:
+    <<: *RuleProviders
+    path: './rules/Personal.yaml'
+    url: 'https://raw.githubusercontent.com/yishangfei/run/main/Clash/Personal.yaml'
+
   AI:
     <<: *RuleProviders
     path: './rules/AI.yaml'
@@ -271,6 +276,7 @@ rules:
   - RULE-SET, AI, ChatGPT
   - RULE-SET, Microsoft, Microsoft
   - RULE-SET, Telegram, Telegram
+  - RULE-SET, Personal, 节点选择
   - RULE-SET, Twitter, 节点选择
   - RULE-SET, GitHub, 节点选择
   - RULE-SET, Apkpure, 节点选择
