@@ -1,0 +1,26 @@
+# > local
+ip-cidr, 10.0.0.0/8, direct
+ip-cidr, 127.0.0.0/8, direct
+ip-cidr, 172.16.0.0/12, direct
+ip-cidr, 192.168.0.0/16, direct
+ip-cidr, 224.0.0.0/24, direct
+ip-cidr, 182.254.116.0/24, direct
+GEOIP,CN,direct
+
+#Flutter
+HOST-SUFFIX,pub.dev, 节点选择
+# zerotier
+HOST-SUFFIX,zerotier.com, 节点选择
+# docker
+HOST-SUFFIX,docker.com, 节点选择
+# 中银香港
+HOST-SUFFIX,bochk.com, 节点选择
+HOST-SUFFIX,etnet.com.hk, 节点选择
+# 汇丰
+HOST-SUFFIX,hsbc.com.hk, 节点选择
+# 北京时间
+HOST-SUFFIX,time.is, 节点选择
+# FlexColorScheme
+HOST-SUFFIX,rydmike.com, 节点选择
+# 星城租房
+HOST-SUFFIX,pglstatp-toutiao.com, reject
