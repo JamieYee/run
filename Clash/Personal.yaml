@@ -1,8 +1,8 @@
 payload:
-  -DOMAIN-SUFFIX,pub.dev
-  -DOMAIN-SUFFIX,zerotier.com
-  -DOMAIN-SUFFIX,bochk.com
-  -DOMAIN-SUFFIX,etnet.com.hk
-  -DOMAIN-SUFFIX,hsbc.com.hk
-  -DOMAIN-SUFFIX,time.is
-  -DOMAIN-SUFFIX,rydmike.com
+  - DOMAIN-SUFFIX,pub.dev
+  - DOMAIN-SUFFIX,zerotier.com
+  - DOMAIN-SUFFIX,bochk.com
+  - DOMAIN-SUFFIX,etnet.com.hk
+  - DOMAIN-SUFFIX,hsbc.com.hk
+  - DOMAIN-SUFFIX,time.is
+  - DOMAIN-SUFFIX,rydmike.com
