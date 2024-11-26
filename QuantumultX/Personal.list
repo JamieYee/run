@@ -17,3 +17,5 @@ HOST-SUFFIX,rydmike.com, 节点选择
 HOST-SUFFIX,pglstatp-toutiao.com, reject
 # Jable
 HOST-SUFFIX,jable.tv, 节点选择
+# v2ex
+HOST-SUFFIX,v2ex.com, 节点选择
