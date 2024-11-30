@@ -19,3 +19,10 @@ HOST-SUFFIX,pglstatp-toutiao.com, reject
 HOST-SUFFIX,jable.tv, 节点选择
 # v2ex
 HOST-SUFFIX,v2ex.com, 节点选择
+# TMDB
+HOST-SUFFIX,tmdb.org, 节点选择
+HOST-SUFFIX,themoviedb.org, 节点选择
+# infuse
+HOST-SUFFIX,infuse.im, 节点选择
+# trakt
+HOST-SUFFIX,trakt.tv, 节点选择
