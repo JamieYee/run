@@ -15,3 +15,10 @@ DOMAIN-SUFFIX,rydmike.com
 DOMAIN-SUFFIX,jable.tv
 # v2ex
 DOMAIN-SUFFIX,v2ex.com
+# TMDB
+DOMAIN-SUFFIX,tmdb.org
+DOMAIN-SUFFIX,themoviedb.org
+# infuse
+DOMAIN-SUFFIX,infuse.im
+# trakt
+DOMAIN-SUFFIX,trakt.tv
