@@ -7,3 +7,7 @@ payload:
   - DOMAIN-SUFFIX,time.is
   - DOMAIN-SUFFIX,rydmike.com
   - DOMAIN-SUFFIX,v2ex.com
+  - DOMAIN-SUFFIX,tmdb.org
+  - DOMAIN-SUFFIX,themoviedb.org
+  - DOMAIN-SUFFIX,infuse.im
+  - DOMAIN-SUFFIX,trakt.tv
