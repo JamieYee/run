@@ -105,6 +105,7 @@ proxy-providers:
     path: './proxy_providers/机场名称1.yaml'
 
 # 锚点 - 节点筛选组
+FilterHome: &FilterHome '^(?=.*(Home))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
 FilterHK: &FilterHK '^(?=.*(香港|HK|Hong|🇭🇰))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
 FilterTW: &FilterTW '^(?=.*(台湾|TW|Taiwan|🇹🇼|🇨🇳))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
 FilterJP: &FilterJP '^(?=.*(日本|JP|Japan|🇯🇵))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
@@ -131,6 +132,7 @@ proxy-groups:
   - {name: ChatGPT, type: select, proxies: [新国时延优选, 熊啾啾], icon:  https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png}
   - {name: Telegram, type: select, proxies: [节点选择,新国时延优选, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png}
   - {name: Microsoft, type: select, proxies: [DIRECT, 节点选择], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
+  - {name: 回家之路, type: url-test, include-all: true, filter: *FilterHome, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png}
   - {name: 漏网之鱼, type: select, proxies: [节点选择, DIRECT], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png}
 
 # 时延优选
