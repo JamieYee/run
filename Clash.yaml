@@ -278,7 +278,7 @@ rule-providers:
 
 # 规则指向
 rules:
-  - IP-CIDR,192.168.31.0/24,回家之路
+  - IP-CIDR,192.168.31.0/24,回家之路,no-resolve
   - RULE-SET, Lan, DIRECT
   - RULE-SET, Direct, DIRECT
   - RULE-SET, AI, ChatGPT
