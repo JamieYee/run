@@ -54,7 +54,6 @@ sniffer:
     - +.v2ex.com
 
   skip-domain:
-    - 'rule-set:cn_domain,private_domain'
     - 'Mijia Cloud'
     - '+.push.apple.com'
     - '+.wechat.com'
