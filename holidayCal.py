@@ -83,5 +83,5 @@ for event_data in events_data:
 os.makedirs(r"D:\Download", exist_ok=True)
 
 # 保存文件
-with open(r"D:\Download\holidayCal.ics", "w") as f:
+with open(r"D:\Download\holidayCal.ics", "w", encoding="utf-8") as f:
     f.writelines(calendar)
