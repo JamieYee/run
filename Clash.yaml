@@ -139,7 +139,7 @@ RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, 
 proxy-groups: 
   - {name: 自动选择, type: url-test, include-all: true, filter: *FilterAll, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Auto.png}
   - {name: 节点选择, type: select, proxies: [自动选择, 香港时延优选, 新国时延优选], icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
-  - {name: ChatGPT, type: select, proxies: [新国时延优选,台湾时延优选,日本时延优选,韩国时延优选,节点选择], icon:  https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png}
+  - {name: ChatGPT, type: select, proxies: [新国时延优选,美国时延优选,节点选择], icon:  https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png}
   - {name: Telegram, type: select, proxies: [节点选择, 新国时延优选, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png}
   - {name: Microsoft, type: select, proxies: [DIRECT, 节点选择], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
   - {name: 回家之路, type: url-test, include-all: true, filter: *FilterHome, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png}
