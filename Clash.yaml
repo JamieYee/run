@@ -300,8 +300,8 @@ rules:
   - RULE-SET, Direct, DIRECT
   - RULE-SET, AI, ChatGPT
   - RULE-SET, Apple, Apple
-  - RULE-SET, Apple, AppStore
-  - RULE-SET, Apple, AppleMusic
+  - RULE-SET, AppStore, Apple
+  - RULE-SET, AppleMusic, Apple
   - RULE-SET, Microsoft, Microsoft
   - RULE-SET, Telegram, Telegram
   - RULE-SET, Personal, 节点选择
