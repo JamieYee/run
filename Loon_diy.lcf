@@ -43,7 +43,6 @@ resource-parser = https://kelee.one/Resource/Script/Sub-Store/sub-store-parser_f
 [Remote Proxy]
 Ladder = https://baidu.com,udp=false,fast-open=false,vmess-aead=true,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Vpn.png
 
-
 # >策略组
 [Proxy Group]
 自动选择 = url-test,全球节点,interval = 600,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Auto.png
@@ -105,7 +104,7 @@ FINAL,漏网之鱼
 
 # >分流规则 远程订阅
 [Remote Rule]
-https://rule.kelee.one/Loon/AI.lsr, policy=OpenAi, tag=OpenAI, enabled=true
+https://kelee.one/Tool/Loon/Lsr/AI.lsr, policy=OpenAi, tag=OpenAI, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PayPal/PayPal.list, policy=PayPal, tag=PayPal, enabled=true
 https://raw.githubusercontent.com/yishangfei/run/main/Loon/Personal.lsr, policy=节点选择, tag=Personal, enabled=true
@@ -160,10 +159,9 @@ https://kelee.one/Tool/Loon/Lpx/BoxJs.lpx, policy=节点选择, tag=BoxJS, enabl
 https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=节点选择, tag=Sub-Store, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/TestFlightRegionUnlock.lpx, tag=TestFlight解锁, enabled=true
-https://kelee.one/Tool/Loon/Lpx/QuickSearch.lpx, enabled=false
+https://kelee.one/Tool/Loon/Lpx/QuickSearch.lpx, enabled=true
 https://whatshub.top/plugin/bili.plugin, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
-https://kelee.one/Tool/Loon/Lpx/TikTok_redirect.lpx, policy=TikTok, enabled=true
 https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Weibo_remove_ads.lpx, enabled=true
 https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, enabled=true
