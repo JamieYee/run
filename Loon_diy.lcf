@@ -105,10 +105,10 @@ FINAL,漏网之鱼
 
 # >分流规则 远程订阅
 [Remote Rule]
-https://kelee.one/Tool/Loon/Rule/AI.list, policy=OpenAi, tag=OpenAI, enabled=true
+https://rule.kelee.one/Loon/AI.lsr, policy=OpenAi, tag=OpenAI, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PayPal/PayPal.list, policy=PayPal, tag=PayPal, enabled=true
-https://raw.githubusercontent.com/yishangfei/run/main/Loon/Personal.list, policy=节点选择, tag=Personal, enabled=true
+https://raw.githubusercontent.com/yishangfei/run/main/Loon/Personal.lsr, policy=节点选择, tag=Personal, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Duolingo/Duolingo.list, policy=节点选择, tag=Duolingo, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Google/Google.list, policy=节点选择, tag=Google, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list, policy=节点选择, tag=YouTube, enabled=true
@@ -150,40 +150,40 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 
 # >插件(类似Surge的模块)
 [Plugin]
-https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy=漏网之鱼, enabled=true
-https://kelee.one/Tool/Loon/Plugin/AppleWeatherEnhancer.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy=节点选择, tag=插件仓库, enabled=true
-https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin, policy=节点选择, tag=BoxJS, enabled=true
-https://raw.githubusercontent.com/Peng-YM/Sub-Store/master/config/Loon.plugin, policy=自动选择, tag=Sub-Store, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/TestFlightRegionUnlock.plugin, tag=TestFlight解锁, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QuickSearch.plugin, enabled=false
+https://kelee.one/Tool/Loon/Lpx/Block_HTTPDNS.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BlockAdvertisers.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Remove_ads_by_keli.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Prevent_DNS_Leaks.lpx, policy=漏网之鱼, enabled=true
+https://kelee.one/Tool/Loon/Lpx/AppleWeatherEnhancer.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/LoonGallery.lpx, policy=节点选择, tag=插件仓库, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BoxJs.lpx, policy=节点选择, tag=BoxJS, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Sub-Store.lpx, policy=节点选择, tag=Sub-Store, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Node_detection_tool.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TestFlightRegionUnlock.lpx, tag=TestFlight解锁, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QuickSearch.lpx, enabled=false
 https://whatshub.top/plugin/bili.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/TikTok_redirect.plugin, policy=TikTok, enabled=true
-https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Taobao_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/LuckinCoffee_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/12306_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Bank_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QQMusic_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/FleaMarket_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/TikTok_redirect.lpx, policy=TikTok, enabled=true
+https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weibo_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Zhihu_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Cainiao_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/NeteaseCloudMusic_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Taobao_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/JD_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/smzdm_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/LuckinCoffee_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/BaiduNetDisk_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/12306_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Bank_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx, enabled=true
+https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx, enabled=true
 [MITM]
 hostname =
 ca-p12 = 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
