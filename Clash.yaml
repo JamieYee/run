@@ -102,14 +102,15 @@ proxy-providers:
     path: './proxy_providers/Ladder.yaml'
 
 # 锚点 - 节点筛选组
-FilterHome: &FilterHome '^(?=.*(Home))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
-FilterHK: &FilterHK '^(?=.*(香港|HK|Hong|🇭🇰))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
-FilterTW: &FilterTW '^(?=.*(台湾|TW|Taiwan|🇹🇼|🇨🇳))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
-FilterJP: &FilterJP '^(?=.*(日本|JP|Japan|🇯🇵))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
-FilterKR: &FilterKR '^(?=.*(韩国|韓|KR|Korea|🇰🇷))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
-FilterSG: &FilterSG '^(?=.*(新加坡|狮城|SG|Singapore|🇸🇬))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
-FilterUS: &FilterUS '^(?=.*(美国|US|United States|America|🇺🇸))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
-FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
+FilterHK: &FilterHK '^(?=.*(香港|HK|Hong|🇭🇰))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
+FilterTW: &FilterTW '^(?=.*(台湾|TW|Taiwan|🇹🇼|🇨🇳))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
+FilterJP: &FilterJP '^(?=.*(日本|JP|Japan|🇯🇵))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
+FilterKR: &FilterKR '^(?=.*(韩国|韓|KR|Korea|🇰🇷))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
+FilterSG: &FilterSG '^(?=.*(新加坡|狮城|SG|Singapore|🇸🇬))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
+FilterUS: &FilterUS '^(?=.*(美国|US|United States|America|🇺🇸))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
+FilterMJ: &FilterMJ '^(?=.*(魔戒))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
+FilterHome: &FilterHome '^(?=.*(Home))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
+FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|魔戒|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
 
 # 参数锚点
 # 锚点 - 时延优选参数 [每 50 秒一次惰性健康检查，容差 300ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
@@ -124,7 +125,7 @@ RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, 
 # 策略组
 proxy-groups: 
   - {name: 自动选择, type: url-test, include-all: true, filter: *FilterAll, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Auto.png}
-  - {name: 节点选择, type: select, proxies: [自动选择, 香港时延优选, 新国时延优选], icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
+  - {name: 节点选择, type: select, proxies: [自动选择, 香港时延优选, 新国时延优选, 魔戒时延优选], icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
   - {name: ChatGPT, type: select, proxies: [新国时延优选,美国时延优选,节点选择], icon:  https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png}
   - {name: Telegram, type: select, proxies: [节点选择, 新国时延优选, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png}
   - {name: Apple, type: select, proxies: [DIRECT, 节点选择, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png}
@@ -139,6 +140,7 @@ proxy-groups:
   - {name: 韩国时延优选, <<: *UrlTest, filter: *FilterKR}
   - {name: 新国时延优选, <<: *UrlTest, filter: *FilterSG}
   - {name: 美国时延优选, <<: *UrlTest, filter: *FilterUS}
+  - {name: 魔戒时延优选, <<: *UrlTest, filter: *FilterMJ}
 
 # 故障转移
   - {name: 香港故障转移, <<: *FallBack, filter: *FilterHK}
