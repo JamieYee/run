@@ -130,7 +130,7 @@ proxy-groups:
   - {name: Telegram, type: select, proxies: [节点选择, 新国时延优选, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png}
   - {name: Apple, type: select, proxies: [DIRECT, 节点选择, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png}
   - {name: Microsoft, type: select, proxies: [DIRECT, 节点选择], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
-  - {name: 回家之路, type: url-test, include-all: true, filter: *FilterHome, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png}
+  - {name: 回家之路, type: select, include-all: true, filter: *FilterHome, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png}
   - {name: 漏网之鱼, type: select, proxies: [节点选择, DIRECT], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png}
 
 # 时延优选
