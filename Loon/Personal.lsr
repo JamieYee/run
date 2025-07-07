@@ -22,3 +22,6 @@ DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,infuse.im
 # trakt
 DOMAIN-SUFFIX,trakt.tv
+# 盈透
+DOMAIN-SUFFIX,ibkr.com
+DOMAIN-SUFFIX,interactivebrokers.com
