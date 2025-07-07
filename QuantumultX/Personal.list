@@ -33,6 +33,6 @@ HOST-SUFFIX,themoviedb.org, 节点选择
 HOST-SUFFIX,infuse.im, 节点选择
 # trakt
 HOST-SUFFIX,trakt.tv, 节点选择
-#星启智住
-HOST-SUFFIX,wxsmw.wxs.qq.com, reject
-HOST-SUFFIX,wximg.wxs.qq.com, reject
+# 盈透
+HOST-SUFFIX,ibkr.com, 节点选择
+HOST-SUFFIX,interactivebrokers.com, 节点选择
