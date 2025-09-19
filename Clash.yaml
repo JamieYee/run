@@ -300,6 +300,13 @@ rules:
   - IP-CIDR,192.168.31.0/24,回家之路,no-resolve
   - RULE-SET, Lan, DIRECT
   - RULE-SET, Direct, DIRECT
+  - RULE-SET, WeChat, DIRECT
+  - RULE-SET, ChinaMax, DIRECT
+  - RULE-SET, ChinaMax_IP, DIRECT
+  - RULE-SET, ChinaMedia, DIRECT
+  - RULE-SET, ChinaDownloadCDN, DIRECT
+  - RULE-SET, iCloudChina, DIRECT
+  - RULE-SET, ESET_China, DIRECT
   - RULE-SET, AI, ChatGPT
   - RULE-SET, Apple, Apple
   - RULE-SET, AppStore, Apple
@@ -316,13 +323,7 @@ rules:
   - RULE-SET, Wikipedia, 节点选择
   - RULE-SET, Proxy, 节点选择
   - RULE-SET, Google, 节点选择
-  - RULE-SET, WeChat, DIRECT
-  - RULE-SET, ChinaMax, DIRECT
-  - RULE-SET, ChinaMax_IP, DIRECT
-  - RULE-SET, ChinaMedia, DIRECT
-  - RULE-SET, ChinaDownloadCDN, DIRECT
-  - RULE-SET, iCloudChina, DIRECT
-  - RULE-SET, ESET_China, DIRECT
   - RULE-SET, Privacy, REJECT
   - GEOIP, CN, DIRECT
   - MATCH, 漏网之鱼
+
