@@ -182,12 +182,12 @@ rule-providers:
 
   Apple:
     <<: *RuleProviders
-    path: './rules/AppleMusic.yaml'
+    path: './rules/Apple.yaml'
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.yaml'
     
   AppStore:
     <<: *RuleProviders
-    path: './rules/AppleMusic.yaml'
+    path: './rules/AppStore.yaml'
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppStore/AppStore.yaml'    
     
   AppleMusic:
@@ -326,4 +326,5 @@ rules:
   - RULE-SET, Privacy, REJECT
   - GEOIP, CN, DIRECT
   - MATCH, 漏网之鱼
+
 
