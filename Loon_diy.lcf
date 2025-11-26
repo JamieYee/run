@@ -1,40 +1,25 @@
 [General]
-ip-mode = v4-only
-mitm-on-wifi-access = false
-sni-sniffing = true
-disable-stun = true
-dns-reject-mode = LoopbackIP
-domain-reject-mode = DNS
-udp-fallback-mode = REJECT
-disconnect-on-policy-change = false
-switch-node-after-failure-times = 3
-geoip-url = https://raw.githubusercontent.com/Masaiki/GeoIP2-CN/release/Country.mmdb
-ipasn-url = https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
-# IPv6 支持
-ipv6 = true
-# > 跳过某个域名或者IP段
-skip-proxy = 10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
-bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
-# DNS 服务器
-dns-server = 223.5.5.5,119.29.29.29
-doh-server = https://dns.ipv4dns.com/dns-query,https://dns.alidns.com/dns-query
-# Wi-Fi 访问
-allow-udp-proxy = false
-allow-wifi-access = false
-wifi-access-http-port = 7891
-wifi-access-socks5-port = 7890
-# > real-ip指定的域名将不返回fake ip响应，直接将dns请求发往目标dns服务器
-real-ip = msftconnecttest.com,msftncsi.com,*.msftconnecttest.com,*.msftncsi.com,*.srv.nintendo.net,*.stun.playstation.net,xbox.*.microsoft.com,*.xboxlive.com,*.battlenet.com.cn,*.battlenet.com,*.blzstatic.cn,*.battle.net
-# > 代理测速 URL
-proxy-test-url = http://www.google.com/blank.html
-internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
-# > 测速超时 (s)
-test-timeout = 3
-interface-mode = auto
-# 解析器
-resource-parser = https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-parser.loon.min.js
-# ssid-trigger参数，用于指定SSID下流量模式切换，（default表示默认，cellular表示蜂窝，目前支持三种值：rule，direct，proxy） 
-#ssid-trigger = "default":rule, "cellular":rule,"xjj_5G":direct
+ip-mode=v4-only
+ipv6-vif=off
+dns-server=system
+sni-sniffing=true
+disable-stun=true
+dns-reject-mode=LoopbackIP
+domain-reject-mode=DNS
+udp-fallback-mode=REJECT
+wifi-access-http-port=7890
+wifi-access-socks5-port=7891
+allow-wifi-access=false
+interface-mode=auto
+test-timeout=5
+disconnect-on-policy-change=false
+internet-test-url=http://connectivitycheck.platform.hicloud.com/generate_204
+proxy-test-url=http://www.gstatic.com/generate_204
+resource-parser=https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
+geoip-url=https://geodata.kelee.one/Country-Masaiki.mmdb
+ipasn-url=https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
+skip-proxy=192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, localhost, *.local, e.crashlynatics.com
+bypass-tun=10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
 
 # >手动添加的节点
 [Proxy] 
