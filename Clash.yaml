@@ -109,7 +109,6 @@ FilterKR: &FilterKR '^(?=.*(韩国|韓|KR|Korea|🇰🇷))^(?!.*(网站|地址|�
 FilterSG: &FilterSG '^(?=.*(新加坡|狮城|SG|Singapore|🇸🇬))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
 FilterUS: &FilterUS '^(?=.*(美国|US|United States|America|🇺🇸))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
 FilterMJ: &FilterMJ '^(?=.*(魔戒))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量)).*$'
-FilterHome: &FilterHome '^(?=.*(Home))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
 FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
 
 # 参数锚点
@@ -130,9 +129,12 @@ proxy-groups:
   - {name: Telegram, type: select, proxies: [节点选择, 新国时延优选, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png}
   - {name: Apple, type: select, proxies: [DIRECT, 节点选择, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png}
   - {name: Microsoft, type: select, proxies: [DIRECT, 节点选择], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
-  - {name: 回家之路, type: select, include-all: true, filter: *FilterHome, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/China.png}
   - {name: 漏网之鱼, type: select, proxies: [节点选择, DIRECT], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png}
 
+# 个人需求
+  - {name: XJJ, <<: *UrlTest, filter: '^(?=.*xjj)'}
+  - {name: HOME, <<: *UrlTest, filter: '^(?=.*Home)'}
+  
 # 时延优选
   - {name: 香港时延优选, <<: *UrlTest, filter: *FilterHK}
   - {name: 台湾时延优选, <<: *UrlTest, filter: *FilterTW}
@@ -297,7 +299,8 @@ rule-providers:
 
 # 规则指向
 rules:
-  - IP-CIDR,192.168.31.0/24,回家之路,no-resolve
+  - IP-CIDR,192.168.3.0/24,XJJ
+  - IP-CIDR,192.168.31.0/24,HOME
   - RULE-SET, Lan, DIRECT
   - RULE-SET, Direct, DIRECT
   - RULE-SET, WeChat, DIRECT
@@ -326,5 +329,6 @@ rules:
   - RULE-SET, Privacy, REJECT
   - GEOIP, CN, DIRECT
   - MATCH, 漏网之鱼
+
 
 
