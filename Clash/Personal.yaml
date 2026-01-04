@@ -14,3 +14,4 @@ payload:
   - DOMAIN-SUFFIX,ibkr.com
   - DOMAIN-SUFFIX,interactivebrokers.com
   - DOMAIN-SUFFIX,imgur.com
+  - DOMAIN-SUFFIX,gitlab.com
