@@ -20,7 +20,7 @@ global-client-fingerprint: chrome
 allow-lan: true
 mode: rule
 log-level: info
-ipv6: true
+ipv6: false
 udp: true
 
 external-controller: 0.0.0.0:9090
@@ -347,6 +347,7 @@ rules:
   - RULE-SET, Privacy, REJECT
   - GEOIP, CN, DIRECT
   - MATCH, 漏网之鱼
+
 
 
 
