@@ -125,7 +125,7 @@ RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, 
 proxy-groups: 
   - {name: 自动选择, type: url-test, include-all: true, filter: *FilterAll, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Auto.png}
   - {name: 节点选择, type: select, proxies: [自动选择, 香港时延优选, 新国时延优选, 魔戒时延优选], icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
-  - {name: ChatGPT, type: select, proxies: [新国时延优选,台湾时延优选,日本时延优选,美国时延优选,节点选择], icon:  https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png}
+  - {name: AI, type: select, proxies: [新国时延优选,台湾时延优选,日本时延优选,美国时延优选,节点选择], icon:  https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png}
   - {name: Telegram, type: select, proxies: [节点选择, 新国时延优选, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png}
   - {name: Apple, type: select, proxies: [DIRECT, 节点选择, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png}
   - {name: Microsoft, type: select, proxies: [DIRECT, 节点选择], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
@@ -177,10 +177,15 @@ rule-providers:
     path: './rules/Personal.yaml'
     url: 'https://raw.githubusercontent.com/yishangfei/run/main/Clash/Personal.yaml'
 
-  AI:
+  Gemini:
     <<: *RuleProviders
-    path: './rules/AI.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/AI.yaml'
+    path: './rules/Gemini.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.yaml'
+
+  OpenAI:
+    <<: *RuleProviders
+    path: './rules/OpenAI.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.yaml'
 
   Apple:
     <<: *RuleProviders
@@ -322,7 +327,8 @@ rules:
   - RULE-SET, ChinaDownloadCDN, DIRECT
   - RULE-SET, iCloudChina, DIRECT
   - RULE-SET, ESET_China, DIRECT
-  - RULE-SET, AI, ChatGPT
+  - RULE-SET, Gemini, AI
+  - RULE-SET, OpenAI, AI
   - RULE-SET, Apple, Apple
   - RULE-SET, AppStore, Apple
   - RULE-SET, AppleMusic, Apple
@@ -341,6 +347,7 @@ rules:
   - RULE-SET, Privacy, REJECT
   - GEOIP, CN, DIRECT
   - MATCH, 漏网之鱼
+
 
 
 
