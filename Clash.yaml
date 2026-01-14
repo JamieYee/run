@@ -125,7 +125,7 @@ RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, 
 proxy-groups: 
   - {name: 自动选择, type: url-test, include-all: true, filter: *FilterAll, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Auto.png}
   - {name: 节点选择, type: select, proxies: [自动选择, 香港时延优选, 新国时延优选, 魔戒时延优选], icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
-  - {name: AI, type: select, proxies: [新国时延优选,台湾时延优选,日本时延优选,美国时延优选,节点选择], icon:  https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ChatGPT-green.png}
+  - {name: Google, type: select, proxies: [新国时延优选,台湾时延优选,美国时延优选,节点选择], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png}
   - {name: Telegram, type: select, proxies: [节点选择, 新国时延优选, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png}
   - {name: Apple, type: select, proxies: [DIRECT, 节点选择, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png}
   - {name: Microsoft, type: select, proxies: [DIRECT, 节点选择], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
@@ -327,13 +327,14 @@ rules:
   - RULE-SET, ChinaDownloadCDN, DIRECT
   - RULE-SET, iCloudChina, DIRECT
   - RULE-SET, ESET_China, DIRECT
-  - RULE-SET, Gemini, AI
-  - RULE-SET, OpenAI, AI
+  - RULE-SET, Gemini, Google
+  - RULE-SET, Google, Google
   - RULE-SET, Apple, Apple
   - RULE-SET, AppStore, Apple
   - RULE-SET, AppleMusic, Apple
   - RULE-SET, Microsoft, Microsoft
   - RULE-SET, Telegram, Telegram
+  - RULE-SET, OpenAI, 节点选择
   - RULE-SET, Personal, 节点选择
   - RULE-SET, Twitter, 节点选择
   - RULE-SET, GitHub, 节点选择
@@ -343,10 +344,10 @@ rules:
   - RULE-SET, GlobalMedia, 节点选择
   - RULE-SET, Wikipedia, 节点选择
   - RULE-SET, Proxy, 节点选择
-  - RULE-SET, Google, 节点选择
   - RULE-SET, Privacy, REJECT
   - GEOIP, CN, DIRECT
   - MATCH, 漏网之鱼
+
 
 
 
