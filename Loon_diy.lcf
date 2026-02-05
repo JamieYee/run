@@ -30,15 +30,13 @@ Ladder = https://gist.githubusercontent.com/JamieYee/,udp=false,block-quic=true,
 
 # >策略组
 [Proxy Group]
-节点选择 = select,香港时延优选,新国时延优选,全球手动策略,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
+全球手动 = select,全球节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
+节点选择 = select,全球手动,香港时延优选,新国时延优选,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
 Google = select,节点选择,香港时延优选,新国时延优选,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png
 Telegram = select,节点选择,香港时延优选,新国时延优选,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png
 Apple = select,DIRECT,节点选择,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png
 PayPal = select,节点选择,美国时延优选,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Paypal.png
 漏网之鱼 = select,节点选择,DIRECT,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Final.png
-
-# --------------------------------
-全球手动策略 = select, 全球节点, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/Global.png
 
 # --------------------------------
 # 时延优选
