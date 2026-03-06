@@ -25,3 +25,5 @@ DOMAIN-SUFFIX,trakt.tv
 # 盈透
 DOMAIN-SUFFIX,ibkr.com
 DOMAIN-SUFFIX,interactivebrokers.com
+# netsyo机场
+DOMAIN,oss.images.aliyun.o4.syouuser.com
