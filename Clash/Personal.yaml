@@ -15,3 +15,4 @@ payload:
   - DOMAIN-SUFFIX,interactivebrokers.com
   - DOMAIN-SUFFIX,imgur.com
   - DOMAIN-SUFFIX,gitlab.com
+  - DOMAIN,oss.images.aliyun.o4.syouuser.com
