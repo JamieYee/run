@@ -124,7 +124,7 @@ RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, 
 # 策略组
 proxy-groups: 
   - {name: 自动选择, type: url-test, include-all: true, filter: *FilterAll, icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Auto.png}
-  - {name: 节点选择, type: select, proxies: [自动选择, 香港时延优选, 新国时延优选, 魔戒时延优选], icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
+  - {name: 节点选择, type: select, proxies: [自动选择, 香港时延优选, 新国时延优选, 备用时延优选], icon:  https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png}
   - {name: Google, type: select, proxies: [新国时延优选,台湾时延优选,美国时延优选,节点选择], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png}
   - {name: Telegram, type: select, proxies: [节点选择, 新国时延优选, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png}
   - {name: Apple, type: select, proxies: [DIRECT, 节点选择, 美国时延优选], icon:  https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png}
@@ -347,6 +347,7 @@ rules:
   - RULE-SET, Privacy, REJECT
   - GEOIP, CN, DIRECT
   - MATCH, 漏网之鱼
+
 
 
 
