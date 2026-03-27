@@ -187,6 +187,11 @@ rule-providers:
     path: './rules/OpenAI.yaml'
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.yaml'
 
+  Claude:
+    <<: *RuleProviders
+    path: './rules/Claude.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml'
+
   Apple:
     <<: *RuleProviders
     path: './rules/Apple.yaml'
@@ -329,12 +334,13 @@ rules:
   - RULE-SET, ESET_China, DIRECT
   - RULE-SET, Gemini, Google
   - RULE-SET, Google, Google
+  - RULE-SET, OpenAI, Google
+  - RULE-SET, Claude, Google
   - RULE-SET, Apple, Apple
   - RULE-SET, AppStore, Apple
   - RULE-SET, AppleMusic, Apple
   - RULE-SET, Microsoft, Microsoft
   - RULE-SET, Telegram, Telegram
-  - RULE-SET, OpenAI, 节点选择
   - RULE-SET, Personal, 节点选择
   - RULE-SET, Twitter, 节点选择
   - RULE-SET, GitHub, 节点选择
