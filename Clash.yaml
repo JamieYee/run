@@ -321,6 +321,7 @@ rule-providers:
 rules:
   - IP-CIDR,192.168.3.0/24,XJJ
   - IP-CIDR,192.168.31.0/24,HOME
+  - DOMAIN,inspect.isar-community.dev,DIRECT
   - RULE-SET, Lan, DIRECT
   - RULE-SET, Direct, DIRECT
   - RULE-SET, WeChat, DIRECT
