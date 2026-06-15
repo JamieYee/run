@@ -37,8 +37,12 @@ DOMAIN-SUFFIX,interactivebrokers.com
 DOMAIN-SUFFIX,ibkr.com
 DOMAIN-SUFFIX,ibkrcontent.com
 DOMAIN-SUFFIX,ibllc.com
-# 账户管理与登录相关
 DOMAIN-SUFFIX,interactivebrokers.com.hk
 DOMAIN-SUFFIX,ibkrcampus.com
 IP-CIDR,91.206.128.0/22
+# 长桥证券 (Longbridge) 
+DOMAIN-KEYWORD, longbridge
+DOMAIN-SUFFIX, longbridge.com
+DOMAIN-SUFFIX, longbridge.hk
+DOMAIN-SUFFIX, lbkrs.com
 
