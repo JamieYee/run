@@ -333,7 +333,6 @@ rules:
   - RULE-SET, Lan, DIRECT
   - RULE-SET, Direct, DIRECT
   - RULE-SET, WeChat, DIRECT
-  - RULE-SET, XiaoHongShu, XJJ
   - RULE-SET, Kingsoft, DIRECT
   - RULE-SET, ChinaMax, DIRECT
   - RULE-SET, ChinaMax_IP, DIRECT
