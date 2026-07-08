@@ -106,6 +106,11 @@ proxy-providers:
     <<: *NodeParam
     path: './proxy_providers/Ladder.yaml'
 
+  Personal:
+    url: 'https://baidu.com'
+    <<: *NodeParam
+    path: './proxy_providers/Personal.yaml'
+
 # 锚点 - 节点筛选组
 FilterHK: &FilterHK '^(?=.*(香港|HK|Hong|🇭🇰))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
 FilterTW: &FilterTW '^(?=.*(台湾|TW|Taiwan|🇹🇼|🇨🇳))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
