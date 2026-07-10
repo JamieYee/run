@@ -18,21 +18,25 @@ proxy-test-url = http://www.gstatic.com/generate_204
 resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 geoip-url = https://geodata.kelee.one/Country-Masaiki.mmdb
 ipasn-url = https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb
-skip-proxy = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
-bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+skip-proxy = 10.0.0.0/8,172.16.0.0/12,localhost,*.local,e.crashlynatics.com
+bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
 
 # >手动添加的节点
 [Proxy] 
 
 # >机场订阅
 [Remote Proxy]
-Ladder = https://gist.githubusercontent.com/JamieYee/,udp=false,block-quic=true,fast-open=false,vmess-aead=true,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Vpn.png
+Ladder = https://gist.githubusercontent.com/JamieYee/,parser-enabled = true,udp=false,block-quic=true,fast-open=false,vmess-aead=true,skip-cert-verify=default,enabled=true,flexible-sni=true,img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Vpn.png
+Personal = https://sub.store/download/collection/,udp=true,block-quic=true,fast-open=default,vmess-aead=default,skip-cert-verify=true,enabled=false,flexible-sni=false
+
+[Host]
+*.ovalyraa.com = server:https://hydrogen1693.com:44443/dns-query/
 
 # >策略组
 [Proxy Group]
 节点选择 = select,全球手动,香港时延优选,新国时延优选,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png
-Google = select,节点选择,新国时延优选,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png
-AI = select,节点选择,新国时延优选,美国时延优选,img-url = https://raw.githubusercontent.com/lige47/lige_icon/refs/heads/main/icon/04ProxySoft/chatgpt(balck).png
+Google = select,节点选择,新国时延优选,美国时延优选,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Google.png
+AI 服务 = select,节点选择,新国时延优选,美国时延优选,img-url = https://raw.githubusercontent.com/JamieYee/run/refs/heads/main/icon/codex.png
 Telegram = select,节点选择,新国时延优选,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png
 Apple = select,DIRECT,节点选择,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png
 PayPal = select,节点选择,美国时延优选,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/Paypal.png
@@ -41,7 +45,6 @@ PayPal = select,节点选择,美国时延优选,img-url = https://raw.githubuser
 
 # --------------------------------
 # 时延优选
-
 香港时延优选 = url-test,香港节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/HK.png
 新国时延优选 = url-test,新国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/SG.png
 美国时延优选 = url-test,美国节点,interval = 60,tolerance = 50,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/US.png
@@ -61,16 +64,18 @@ PayPal = select,节点选择,美国时延优选,img-url = https://raw.githubuser
 
 # >本地分流规则
 [Rule]
+IP-CIDR,192.168.31.0/24,home,no-resolve
+IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
 FINAL,漏网之鱼
 
 # >分流规则 远程订阅
 [Remote Rule]
 https://raw.githubusercontent.com/JamieYee/run/main/Loon/Personal.lsr, policy=节点选择, tag=Personal, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Gemini/Gemini.list, policy=AI, tag=Gemini, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/OpenAI/OpenAI.list, policy=AI, tag=OpenAI, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Copilot/Copilot.list, policy=AI, tag=Copilot, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Google/Google.list, policy=Google, tag=Google, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list, policy=Google, tag=YouTube, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Gemini/Gemini.list, policy=AI 服务, tag=Gemini, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/OpenAI/OpenAI.list, policy=AI 服务, tag=OpenAI, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Loon/Copilot/Copilot.list, policy=AI 服务, tag=Copilot, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PayPal/PayPal.list, policy=PayPal, tag=PayPal, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Telegram/Telegram.list, policy=Telegram, tag=Telegram, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Global/Global.list, policy=节点选择, tag=Global, enabled=true
