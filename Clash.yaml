@@ -92,13 +92,11 @@ dns:
     - '*.msftncsi.com'
     - 'www.msftconnecttest.com'
   default-nameserver:
-    - system
     - 223.5.5.5
     - 119.29.29.29
-    - '2402:4e00::'
   nameserver:
     - https://223.5.5.5/dns-query
-    - https://223.6.6.6/dns-query
+    - https://1.12.12.12/dns-query
 
 # 锚点 - 节点筛选组
 FilterHK: &FilterHK '^(?=.*(香港|HK|Hong|🇭🇰))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点|流量|魔戒)).*$'
