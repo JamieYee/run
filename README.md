@@ -65,4 +65,4 @@ fastboot reboot
 > 如果系统更新提示“验证时间戳失败”：先关闭 `Play Integrity Fix` 和
 > `TeeSimulator` 模块，然后重新尝试更新。
 
-> 字库备份压缩文件密码：u8voUPBoYutzPsUDRHPT
+> 字库备份压缩文件密码：u8voUPBoYutzPsUDRHPT  备份的是A分区
