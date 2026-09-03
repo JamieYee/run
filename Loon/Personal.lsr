@@ -25,6 +25,8 @@ DOMAIN-SUFFIX,rydmike.com
 DOMAIN-SUFFIX,jable.tv
 # v2ex
 DOMAIN-SUFFIX,v2ex.com
+# linux
+DOMAIN-SUFFIX,linux.do
 # TMDB
 DOMAIN-SUFFIX,tmdb.org
 DOMAIN-SUFFIX,themoviedb.org
