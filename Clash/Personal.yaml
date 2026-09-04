@@ -16,3 +16,4 @@ payload:
   - DOMAIN-SUFFIX,imgur.com
   - DOMAIN-SUFFIX,gitlab.com
   - DOMAIN-SUFFIX,linux.do
+  - DOMAIN-SUFFIX,preply.com
