@@ -123,6 +123,8 @@ proxy-groups:
   - {name: 节点选择, type: select, proxies: [自动选择, 手动选择, 香港时延优选, 新国时延优选, 美国时延优选], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Bypass.png'}
   - {name: Google, type: select, proxies: [节点选择, 美国时延优选, 新国时延优选, 台湾时延优选], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png'}
   - {name: AI 服务, type: select, proxies: [节点选择, 美国时延优选, 新国时延优选, 台湾时延优选], icon: 'https://raw.githubusercontent.com/JamieYee/run/refs/heads/main/icon/codex.png'}
+  - {name: Amazon, type: select, proxies: [节点选择, 美国时延优选, 新国时延优选, 台湾时延优选], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Amazon.png'}
+  - {name: TikTok, type: select, proxies: [节点选择, 美国时延优选, 新国时延优选, 台湾时延优选], icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png'}
   - {name: Telegram, type: select, proxies: [节点选择, 新国时延优选, 美国时延优选], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Telegram.png'}
   - {name: Apple, type: select, proxies: [DIRECT, 节点选择, 美国时延优选], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png'}
   - {name: Microsoft, type: select, proxies: [DIRECT, 节点选择], icon: 'https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png'}
@@ -192,6 +194,16 @@ rule-providers:
     <<: *RuleProviders
     path: './rules/Copilot.yaml'
     url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Copilot/Copilot.yaml'
+  
+  Amazon:
+    <<: *RuleProviders
+    path: './rules/Amazon.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Amazon/Amazon.yaml'
+
+  TikTok:
+    <<: *RuleProviders
+    path: './rules/TikTok.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml'
 
   Apple:
     <<: *RuleProviders
@@ -337,6 +349,8 @@ rules:
   - RULE-SET, OpenAI, AI 服务
   - RULE-SET, Claude, AI 服务
   - RULE-SET, Copilot, AI 服务
+  - RULE-SET, Amazon, Amazon
+  - RULE-SET, TikTok, TikTok
   - RULE-SET, Apple, Apple
   - RULE-SET, AppStore, Apple
   - RULE-SET, AppleMusic, Apple
